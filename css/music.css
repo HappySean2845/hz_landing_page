@@ -1,0 +1,120 @@
+body{
+    background-color: #181617;
+}
+#container{
+    position: relative;
+    width: 7.5rem;
+}
+.animate .music_start{
+    opacity: 1;
+}
+.music_start{
+    width:1.29rem;
+    position: absolute;
+    left: 3.11rem;
+    top:9.04rem;
+    transition:all 1s ease 8s;
+    opacity: 0;
+}
+.music_start img{
+    width: 100%;
+}
+.animate .music_btn{
+    opacity: 1;
+}
+.music_btn{
+     width:6.21rem;
+     position: absolute;
+     left: 0.645rem;
+     top:9.49rem;
+    transition:all 1s ease 9s;
+    opacity: 0;
+}
+.music_btn img{
+    width: 100%;
+}
+
+.music_play{
+    position: absolute;
+    right: 0.2rem;
+    top: 0.2rem;
+    width: 0.7rem;
+    height: 0.7rem;
+    overflow: hidden;
+    -moz-backface-visibility: visible;
+    -moz-transform-origin: center center;
+    -moz-animation: musicanimate 2s 0s infinite linear normal backwards;
+    -webkit-backface-visibility: visible;
+    -webkit-transform-origin: center center;
+    -webkit-animation: musicanimate 2s 0s infinite linear normal backwards;
+}
+.music_play img{
+    width:100%;
+}
+
+@-webkit-keyframes musicanimate {
+    0% {
+        -webkit-transform: rotate(0deg) rotate(180 \] ] deg);
+    }
+    100% {
+        -webkit-transform: rotate(360deg);
+    }
+}
+@-moz-keyframes musicanimate {
+    0% {
+        -moz-transform: rotate(0deg) rotate(180 \] ] deg);
+    }
+    100% {
+        -moz-transform: rotate(360deg);
+    }
+}
+.music_play img{
+    width:0.7rem;
+}
+.steps .step{
+    position:absolute;
+    width: 6.21rem;
+    left: 0.645rem;
+    top:100%;
+}
+
+.steps .step_1{
+    transition:all 1s ease 1s
+}
+.steps .step_2{
+    transition:all 1s ease 2s
+}
+.steps .step_3{
+    transition:all 1s ease 3s
+}
+.steps .step_4{
+    transition:all 1s ease 4s
+}
+.steps .step_5{
+    transition:all 1s ease 5s
+}
+.steps .step_6{
+    transition:all 1s ease 6s
+}
+.steps .step img{
+    width: 6.21rem;
+}
+.animate .step_1{
+    top: 1.61rem;
+}
+.animate .step_2{
+    top: 2.9rem;
+}
+.animate .step_3{
+    top: 3.98rem;
+}
+.animate .step_4{
+    top: 5.06rem;
+}
+.animate .step_5{
+    top: 6.47rem;
+}
+.animate .step_6{
+    top: 7.55rem;
+}
+

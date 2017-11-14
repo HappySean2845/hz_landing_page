@@ -2,9 +2,43 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
+    <meta name="viewport" content="initial-scale=1, maximum-scale=1, user-scalable=no, width=device-width">
+    <meta name="screen-orientation" content="portrait">
+    <meta name="x5-orientation" content="portrait">
+    <meta name="format-detection" content="telephone=no"/>
+    <meta name="renderer" content="webkit">
+    <meta http-equiv="X-UA-Compatible" content="IE=Edge,chrome=1">
+    <meta name="apple-mobile-web-app-capable" content="yes"/>
+    <meta name="screen-orientation" content="portrait">
+    <meta name="x5-orientation" content="portrait">
+    <meta name="full-screen" content="yes">
+    <meta name="x5-fullscreen" content="true">
+    <meta name="browsermode" content="application">
+    <meta name="x5-page-mode" content="app">
+    <meta name="msapplication-tap-highlight" content="no">
     <title>Title</title>
+    <link rel="stylesheet" href="css/music.css">
+    <script type="text/javascript" src="bower_components/jquery2/jquery.min.js"></script>
 </head>
 <body>
+<div class="container" id="container">
 
+</div>
+<script type="text/javascript" src="js/main.js"></script>
+<script>
+  function size() {
+    var _screenWidth = document.documentElement.clientWidth < 300 ? 300 : document.documentElement.clientWidth,
+      _UIWidth = 750,
+      _fontSize = _screenWidth / _UIWidth * 100;
+    document.documentElement.style.fontSize = _fontSize + 'px';
+  }
+  size();
+  window.onresize = function () {
+    size();
+  }
+  $(function () {
+
+  })
+</script>
 </body>
 </html>

@@ -2,9 +2,78 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <title>Title</title>
+    <meta name="viewport" content="initial-scale=1, maximum-scale=1, user-scalable=no, width=device-width">
+    <meta name="screen-orientation" content="portrait">
+    <meta name="x5-orientation" content="portrait">
+    <meta name="format-detection" content="telephone=no"/>
+    <meta name="renderer" content="webkit">
+    <meta http-equiv="X-UA-Compatible" content="IE=Edge,chrome=1">
+    <meta name="apple-mobile-web-app-capable" content="yes"/>
+    <meta name="screen-orientation" content="portrait">
+    <meta name="x5-orientation" content="portrait">
+    <meta name="full-screen" content="yes">
+    <meta name="x5-fullscreen" content="true">
+    <meta name="browsermode" content="application">
+    <meta name="x5-page-mode" content="app">
+    <meta name="msapplication-tap-highlight" content="no">
+    <title>华住酒店</title>
+    <link rel="stylesheet" href="css/clean.css">
+    <link rel="stylesheet" href="css/music.css">
+    <script type="text/javascript" src="bower_components/jquery2/jquery.min.js"></script>
 </head>
 <body>
 
+
+<div class="container" id="container">
+    <div class="music_play"><img src="img/music_play_03.png"></div>
+    <div class="steps">
+        <div class="step step_1"><img src="img/music_step_1_03.png"></div>
+        <div class="step step_2"><img src="img/music_step_2_03.png"></div>
+        <div class="step step_3"><img src="img/music_step_3_03.png"></div>
+        <div class="step step_4"><img src="img/music_step_4_03.png"></div>
+        <div class="step step_5"><img src="img/music_step_5_03.png"></div>
+        <div class="step step_6"><img src="img/music_step_6_03.png"></div>
+    </div>
+    <div class="music_start">
+        <img src="img/music_open_03.png" alt="">
+    </div>
+    <div class="music_btn">
+        <img src="img/music_btn_03.png" alt="">
+    </div>
+</div>
+<audio loop="true" sytle="display:none" id="BGM">
+    <source src="audio/music.mp3" type="audio/mpeg"></source>
+</audio>
+<script type="text/javascript" src="js/main.js"></script>
+<script>
+  function size() {
+    var _screenWidth = document.documentElement.clientWidth < 300 ? 300 : document.documentElement.clientWidth,
+      _UIWidth = 750,
+      _fontSize = _screenWidth / _UIWidth * 100;
+    document.documentElement.style.fontSize = _fontSize + 'px';
+    console.log("屏幕尺寸",_screenWidth)
+  }
+  size();
+  window.onresize = function () {
+    size();
+  }
+  $(function () {
+    document.addEventListener('DOMContentLoaded', function () {
+      function audioAutoPlay() {
+        var audio = document.getElementById('BGM');
+        audio.play();
+        document.addEventListener("WeixinJSBridgeReady", function () {
+          audio.play();
+        }, false);
+      }
+      audioAutoPlay();
+    })
+    var windowHeight = $(window).height();
+    $("#container").css("height", windowHeight);
+    setTimeout(function () {
+      $("#container").addClass("animate");
+    },500)
+  })
+</script>
 </body>
 </html>

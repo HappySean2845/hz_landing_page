@@ -13,7 +13,7 @@ body{
     position: absolute;
     left: 3.11rem;
     top:9.04rem;
-    transition:all 1s ease 8s;
+    transition:all 1s ease 7s;
     opacity: 0;
 }
 .music_start img{
@@ -27,7 +27,7 @@ body{
      position: absolute;
      left: 0.645rem;
      top:9.49rem;
-    transition:all 1s ease 9s;
+    transition:all 1s ease 7.8s;
     opacity: 0;
 }
 .music_btn img{
@@ -75,46 +75,139 @@ body{
     position:absolute;
     width: 6.21rem;
     left: 0.645rem;
-    top:100%;
+    transition:all 1.5s ease 1s;
 }
-
 .steps .step_1{
-    transition:all 1s ease 1s
+    background:url("../img/step_1_bg_03.png");
+    height: 1.15rem;
+    background-repeat: no-repeat;
+    background-size: 100% 100%;
+    top: 1.61rem;
+    opacity: 0;
+    margin-left:-1.29rem;
 }
 .steps .step_2{
-    transition:all 1s ease 2s
+    background:url("../img/step_2_bg_03.png");
+    height: 0.7rem;
+    background-repeat: no-repeat;
+    background-size: 100% 100%;
+    top: 2.9rem;
+    opacity: 0;
+    margin-left:1.29rem;
 }
 .steps .step_3{
-    transition:all 1s ease 3s
+    background:url("../img/step_2_bg_03.png");
+    height: 0.7rem;
+    background-repeat: no-repeat;
+    background-size: 100% 100%;
+    top: 3.98rem;
+    opacity: 0;
+    margin-left:-1.29rem;
+
 }
 .steps .step_4{
-    transition:all 1s ease 4s
+    background:url("../img/step_3_bg_03.png");
+    height: 0.7rem;
+    background-repeat: no-repeat;
+    background-size: 100% 100%;
+    top: 5.06rem;
+    opacity: 0;
+    margin-left:1.29rem;
+
 }
 .steps .step_5{
-    transition:all 1s ease 5s
+    background:url("../img/step_4_bg_03.png");
+    height: 0.7rem;
+    background-repeat: no-repeat;
+    background-size: 100% 100%;
+    top: 6.47rem;
+    opacity: 0;
+    margin-left:-1.29rem;
 }
 .steps .step_6{
-    transition:all 1s ease 6s
+    background:url("../img/step_5_bg_03.png");
+    height: 0.7rem;
+    background-repeat: no-repeat;
+    background-size: 100% 100%;
+    top: 7.55rem;
+    opacity: 0;
+    margin-left:-1.29rem;
 }
-.steps .step img{
-    width: 6.21rem;
+
+.steps .step_1 img.wordText{
+    width:5.01rem;
+    left: 0.84rem;
+    top: 0.37rem;
+    transition:all 1.5s ease 2.5s;
+}
+.steps .step_2 img.wordText{
+    width:3.23rem;
+    left: 1.4rem;
+    top: 0.09rem;
+    transition:all 1.5s ease 3s;
+
+}
+.steps .step_3 img.wordText{
+    width:2.67rem;
+    left: 1.71rem;
+    top: 0.17rem;
+    transition:all 1.5s ease 3.5s;
+
+}
+.steps .step_4 img.wordText{
+    width:1.72rem;
+    left: 2.18rem;
+    top: 0.17rem;
+    transition:all 1.5s ease 4s;
+
+}
+.steps .step_5 img.wordText{
+    width:4.06rem;
+    left: 1.02rem;
+    top: 0.17rem;
+    transition:all 1.5s ease 4.5s;
+}
+.steps .step_6 img.wordText{
+    width:2.50rem;
+    left: 1.78rem;
+    top: 0.17rem;
+    transition:all 1.5s ease 5s;
+}
+.steps .step img.wordText{
+    position: absolute;
+    opacity: 0;
+    margin-top: 0.48rem;
+}
+.animate .steps .step img.wordText{
+    opacity: 1;
+    margin-top: 0;
 }
 .animate .step_1{
-    top: 1.61rem;
+    opacity: 1;
+    margin-left: 0;
 }
 .animate .step_2{
-    top: 2.9rem;
+    opacity: 1;
+    margin-left: 0;
+
 }
 .animate .step_3{
-    top: 3.98rem;
+    opacity: 1;
+    margin-left: 0;
+
 }
 .animate .step_4{
-    top: 5.06rem;
+    opacity: 1;
+    margin-left: 0;
+
 }
 .animate .step_5{
-    top: 6.47rem;
+    opacity: 1;
+    margin-left: 0;
+
 }
 .animate .step_6{
-    top: 7.55rem;
+    opacity: 1;
+    margin-left: 0;
 }
 

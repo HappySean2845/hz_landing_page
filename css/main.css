@@ -1,0 +1,126 @@
+#container{
+    width: 7.5rem;
+    position: relative;
+}
+.mainBar{
+    width:100%;
+    height:100%;
+    position: absolute;
+    background-image: url("../img/bar_bg_18.jpg");
+    background-repeat:no-repeat;
+    background-size: 7.5rem 30.93rem;
+    background-position:0rem 0rem;
+}
+.mainBar .barItem{
+    position: absolute;
+    transition:all 1s ease 0s;
+}
+.mainBar .barItem.active{
+    opacity:1;
+    margin-top:0;
+}
+.mainBar .barItem img{
+    width: 100%;
+}
+.mainBar .barItem-1{
+    width: 2.85rem;
+    left: 0;
+    top: 5%;
+    margin-left: 0.45rem;
+    opacity:0;
+    margin-top:30px;
+ }
+.mainBar .barItem-2{
+    width: 2.96rem;
+    right: 0;
+    top: 15%;
+    margin-right: 0.32rem;
+    opacity:0;
+    margin-top:30px;
+}
+.mainBar .barItem-3{
+    width: 2.95rem;
+    left: 0;
+    top: 30%;
+    margin-left: 0.38rem;
+    opacity:0;
+    margin-top:30px;
+}
+.mainBar .barItem-4{
+    width: 2.92rem;
+    right: 0;
+    top:45%;
+    margin-right: 0.42rem;
+    opacity:0;
+    margin-top:30px;
+}
+.mainBar .touchIcon{
+    width: 0.64rem;
+    height: 1.83rem;
+    background:url("../img/bar_icon_03.png");
+    background-size: 100% 100%;
+    background-repeat:no-repeat;
+    left: 50%;
+    margin-left: -0.32rem;
+    top: 0;
+    position: absolute;
+    z-index: 11;
+}
+.mainBar  .touchLine{
+    width: 0.02rem;
+    height:90%;
+    background: #ffd682;
+    left: 50%;
+    margin-left:-0.01rem;
+    position: absolute;
+    margin-top: 5%;
+    z-index:10;
+}
+
+
+
+.mainIndex{
+    position: absolute;
+    width:100%;
+    height:100%;
+    background-image: url("../img/index_bg_02.jpg");
+    background-repeat: no-repeat;
+    -webkit-background-size:100% 100%;
+    background-size:100% 100%;
+}
+.mainIndex img{
+    width:100%;
+}
+.mainIndex.animate .logo{
+    opacity: 1;
+}
+.mainIndex.animate .img {
+    opacity: 1;
+}
+.mainIndex.animate .introd {
+    opacity: 1;
+}
+.mainIndex .logo{
+    width: 2.76rem;
+    position: absolute;
+    left:2.45rem;
+    top: 1.4rem;
+    opacity: 0;
+    transition:all 1s ease 0s;
+}
+.mainIndex .img {
+    width: 6.84rem;
+    position: absolute;
+    left: 0.59rem;
+    top: 1.56rem;
+    opacity: 0;
+    transition:all 1s ease 1.2s;
+}
+.mainIndex .introd {
+    width: 5.99rem;
+    position: absolute;
+    left:0.78rem;
+    top: 4.35rem;
+    opacity: 0;
+    transition:all 1s ease 0.5s;
+}

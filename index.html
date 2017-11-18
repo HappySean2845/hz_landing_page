@@ -16,13 +16,27 @@
     <meta name="browsermode" content="application">
     <meta name="x5-page-mode" content="app">
     <meta name="msapplication-tap-highlight" content="no">
-    <title>Title</title>
-    <link rel="stylesheet" href="css/music.css">
+    <title>华住酒店</title>
+    <link rel="stylesheet" href="css/clean.css">
+    <link rel="stylesheet" href="css/main.css">
     <script type="text/javascript" src="bower_components/jquery2/jquery.min.js"></script>
 </head>
 <body>
 <div class="container" id="container">
-
+    <div class="mainIndex">
+        <div class="logo"><img src="img/index_logo_03.png"></div>
+        <div class="img"><img src="img/index_img_03.png"></div>
+        <div class="introd"><img src="img/index_introd_03.png"></div>
+    </div>
+    <div class="mainBar" style="display: none" id="mainBar">
+        <div class="barItem barItem-1"><img src="img/bar_item1_07.png" alt=""></div>
+        <div class="barItem barItem-2"><img src="img/bar_item2_11.png" alt=""></div>
+        <div class="barItem barItem-3"><img src="img/bar_item3_15.png" alt=""></div>
+        <div class="barItem barItem-4"><img src="img/bar_item4_19.png" alt=""></div>
+        <!--拖动图标-->
+        <div class="touchIcon" id="touchIcon"></div>
+        <div class="touchLine"></div>
+    </div>
 </div>
 <script type="text/javascript" src="js/main.js"></script>
 <script>
@@ -30,6 +44,7 @@
     var _screenWidth = document.documentElement.clientWidth < 300 ? 300 : document.documentElement.clientWidth,
       _UIWidth = 750,
       _fontSize = _screenWidth / _UIWidth * 100;
+      window.fontSize = parseFloat(_fontSize);
     document.documentElement.style.fontSize = _fontSize + 'px';
   }
   size();
@@ -37,7 +52,90 @@
     size();
   }
   $(function () {
+    var windowHeight = $(window).height();
+    $("#container").css("height", windowHeight);
+    setTimeout(function () {
+      $(".mainIndex").addClass("animate");
+      return drawNext();
+    },300)
+    function drawNext() {
+      return setTimeout(function () {
+        $(".mainIndex").fadeOut(800);
+        $("#mainBar").fadeIn(800);
+      },2000)
+    }
+    function preventString(e) {
+      return e.preventDefault()&&e.stopPropagation();
+    }
+    var touchObj = new Object();
+    var touchIcon = document.getElementById("touchIcon");
+    //获取最大可滑动距离
+    var maxCoundTouch = windowHeight - 0 - $(touchIcon)[0].clientHeight*1;
 
+//    alert($(touchIcon)[0].clientHeight*1)
+
+    //    alert(maxCoundTouch)
+    //开始拖动
+    touchIcon.addEventListener("touchstart",function (event) {
+      maxCoundTouch = windowHeight - 0 - $(touchIcon)[0].clientHeight*1;
+      touchObj.bgTransHeight = parseInt(window.fontSize*30.93)-windowHeight;
+//      alert(touchObj.bgTransHeight)
+      console.log("开始拖动",event.targetTouches[0].pageY,'px')
+      touchObj.startY  = parseInt(event.targetTouches[0].pageY);
+      preventString(event);
+    })
+    //持续拖动
+    touchIcon.addEventListener("touchmove",function (event) {
+      touchObj.touchY  = parseInt(event.targetTouches[0].pageY) - touchObj.startY;
+//      console.log("拖动距离",touchObj.touchY);
+      if(touchObj.touchY>=0&&touchObj.touchY<=maxCoundTouch){
+        $(touchIcon).css("top",touchObj.touchY + 'px');
+        $(".mainBar").css("background-position-y",-1*((touchObj.bgTransHeight/maxCoundTouch)*touchObj.touchY)+'px')
+        // 1 2 3 4 出现顺序
+
+        console.log(1*touchObj.touchY,maxCoundTouch*0.2);
+
+
+        if(1*touchObj.touchY>=maxCoundTouch*0.2){
+
+
+          $(".barItem").removeClass("active");
+          $(".barItem-1").addClass("active");
+        }
+        if((1*touchObj.touchY)>=(maxCoundTouch*0.4)){
+
+          console.log(2)
+
+
+          $(".barItem").removeClass("active");
+          $(".barItem-2").addClass("active");
+        }
+        if(1*touchObj.touchY>=maxCoundTouch*0.6){
+
+          console.log(3)
+
+
+          $(".barItem").removeClass("active");
+          $(".barItem-3").addClass("active");
+        }
+        if(1*touchObj.touchY>=maxCoundTouch*0.8){
+
+          console.log(4)
+
+
+          $(".barItem").removeClass("active");
+          $(".barItem-4").addClass("active");
+        }
+      }else{
+        return false;
+      }
+      preventString(event);
+    })
+    //持续拖动
+    touchIcon.addEventListener("touchend",function (event) {
+      console.log("拖动结束");
+      preventString(event);
+    })
   })
 </script>
 </body>

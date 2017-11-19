@@ -20,10 +20,11 @@
     <link rel="stylesheet" href="css/clean.css">
     <link rel="stylesheet" href="css/main.css">
     <script type="text/javascript" src="bower_components/jquery2/jquery.min.js"></script>
+    <script type="text/javascript" src="js/css3d.js"></script>
 </head>
 <body>
 <div class="container" id="container">
-    <div class="mainIndex">
+    <div class="mainIndex"  style="display: none">
         <div class="logo"><img src="img/index_logo_03.png"></div>
         <div class="img"><img src="img/index_img_03.png"></div>
         <div class="introd"><img src="img/index_introd_03.png"></div>
@@ -37,6 +38,11 @@
         <div class="touchIcon" id="touchIcon"></div>
         <div class="touchLine"></div>
     </div>
+    <div id="arScene" class="arScene">
+    </div>
+    <div  class="ar_item_1" id="ar_item_1"></div>
+    <div  class="ar_item_2" id="ar_item_2"></div>
+    <div  class="ar_item_3" id="ar_item_3"></div>
 </div>
 <script type="text/javascript" src="js/main.js"></script>
 <script>
@@ -71,10 +77,6 @@
     var touchIcon = document.getElementById("touchIcon");
     //获取最大可滑动距离
     var maxCoundTouch = windowHeight - 0 - $(touchIcon)[0].clientHeight*1;
-
-//    alert($(touchIcon)[0].clientHeight*1)
-
-    //    alert(maxCoundTouch)
     //开始拖动
     touchIcon.addEventListener("touchstart",function (event) {
       maxCoundTouch = windowHeight - 0 - $(touchIcon)[0].clientHeight*1;
@@ -92,37 +94,19 @@
         $(touchIcon).css("top",touchObj.touchY + 'px');
         $(".mainBar").css("background-position-y",-1*((touchObj.bgTransHeight/maxCoundTouch)*touchObj.touchY)+'px')
         // 1 2 3 4 出现顺序
-
-        console.log(1*touchObj.touchY,maxCoundTouch*0.2);
-
-
         if(1*touchObj.touchY>=maxCoundTouch*0.2){
-
-
           $(".barItem").removeClass("active");
           $(".barItem-1").addClass("active");
         }
         if((1*touchObj.touchY)>=(maxCoundTouch*0.4)){
-
-          console.log(2)
-
-
           $(".barItem").removeClass("active");
           $(".barItem-2").addClass("active");
         }
         if(1*touchObj.touchY>=maxCoundTouch*0.6){
-
-          console.log(3)
-
-
           $(".barItem").removeClass("active");
           $(".barItem-3").addClass("active");
         }
         if(1*touchObj.touchY>=maxCoundTouch*0.8){
-
-          console.log(4)
-
-
           $(".barItem").removeClass("active");
           $(".barItem-4").addClass("active");
         }
@@ -136,6 +120,50 @@
       console.log("拖动结束");
       preventString(event);
     })
+    var s = new C3D.Stage();
+    s.size(window.innerWidth, window.innerHeight).material({
+      color: "rgba(0,0,0,0)"
+    }).update();
+    document.getElementById("arScene").appendChild(s.el);
+    //创建场景
+    var scene = C3D.create({
+      type: 'sprite', position: [0, 0, -s.fov], children: [
+        {
+          type: 'plane',
+          el: document.getElementById('ar_item_1'),
+          name: 'p1',
+          size: [150],
+          position: [100, -30, 0],
+          rotation: [20, 0, 0],
+        },
+        {
+          type: 'plane',
+          el: document.getElementById('ar_item_2'),
+          name: 'p2',
+          size: [150],
+          position: [-100, -150, 0],
+          rotation: [20, 0, 0],
+//          material: [{color: C3D.getRandomColor()}]
+        },
+        {
+          type: 'plane',
+          el: document.getElementById('ar_item_3'),
+          name: 'p3',
+          size: [150],
+          position: [-100, 150, 0],
+          rotation: [20, 0, 0],
+//          material: [{color: C3D.getRandomColor()}]
+        },
+      ]
+    });
+    s.addChild(scene);
+    requestAnimationFrame = window.requestAnimationFrame || window.mozRequestAnimationFrame || window.webkitRequestAnimationFrame || window.msRequestAnimationFrame || window.oRequestAnimationFrame;
+    function go() {
+      scene.rotate(0, 1, 0).updateT();
+      scene.p3.rotate(-1, 0, 0).updateT();
+      requestAnimationFrame(go);
+    }
+    requestAnimationFrame(go);
   })
 </script>
 </body>

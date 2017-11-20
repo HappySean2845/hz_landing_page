@@ -24,7 +24,7 @@
 </head>
 <body>
 <div class="container" id="container">
-    <div class="mainIndex"  style="display: none">
+    <div class="mainIndex" >
         <div class="logo"><img src="img/index_logo_03.png"></div>
         <div class="img"><img src="img/index_img_03.png"></div>
         <div class="introd"><img src="img/index_introd_03.png"></div>
@@ -38,7 +38,7 @@
         <div class="touchIcon" id="touchIcon"></div>
         <div class="touchLine"></div>
     </div>
-    <div id="arScene" class="arScene">
+    <div id="arScene" class="arScene" style="display: none;">
     </div>
     <div  class="ar_item_1" id="ar_item_1"></div>
     <div  class="ar_item_2" id="ar_item_2"></div>
@@ -68,7 +68,7 @@
       return setTimeout(function () {
         $(".mainIndex").fadeOut(800);
         $("#mainBar").fadeIn(800);
-      },2000)
+      },3800)
     }
     function preventString(e) {
       return e.preventDefault()&&e.stopPropagation();
@@ -79,10 +79,14 @@
     var maxCoundTouch = windowHeight - 0 - $(touchIcon)[0].clientHeight*1;
     //开始拖动
     touchIcon.addEventListener("touchstart",function (event) {
+
+      console.log("开始拖动",event);
+
       maxCoundTouch = windowHeight - 0 - $(touchIcon)[0].clientHeight*1;
       touchObj.bgTransHeight = parseInt(window.fontSize*30.93)-windowHeight;
+      touchObj.startY =
 //      alert(touchObj.bgTransHeight)
-      console.log("开始拖动",event.targetTouches[0].pageY,'px')
+//      console.log("开始拖动",event.targetTouches[0].pageY,'px')
       touchObj.startY  = parseInt(event.targetTouches[0].pageY);
       preventString(event);
     })
@@ -117,7 +121,22 @@
     })
     //持续拖动
     touchIcon.addEventListener("touchend",function (event) {
-      console.log("拖动结束");
+      console.log("拖动距离", touchObj.touchY,'最大可拖动距离',maxCoundTouch);
+      //设置最大偏移误差为10px
+      if(touchObj.touchY + 10 >=maxCoundTouch){
+        console.log("拖动完成");
+//        $()
+        $("#mainBar").fadeOut(800);
+        $("#arScene").fadeIn(800);
+      }else{
+        console.log("重新拖动")
+        $("#touchIcon").addClass("animate").css("top",'0px');
+        $(".barItem").removeClass("active");
+        setTimeout(function () {
+          $("#touchIcon").removeClass("animate");
+//          $("#touchIcon").removeClass("reset");
+        },1200)
+      }
       preventString(event);
     })
     var s = new C3D.Stage();

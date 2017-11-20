@@ -81,7 +81,13 @@
     position: absolute;
     z-index: 11;
 }
-
+.mainBar .touchIcon.animate {
+    transition:all 1s ease 0s;
+}
+.mainBar .touchIcon.reset{
+    /*transition:all 1s ease */
+    top:0;
+}
 .mainBar .touchIcon{
     width: 0.64rem;
     height: 1.83rem;
@@ -157,7 +163,7 @@
     left:2.45rem;
     top: 1.4rem;
     opacity: 0;
-    transition:all 1s ease 0s;
+    transition:all 1.5s ease 0s;
 }
 .mainIndex .img {
     width: 6.84rem;
@@ -165,7 +171,7 @@
     left: 0.59rem;
     top: 1.56rem;
     opacity: 0;
-    transition:all 1s ease 1.2s;
+    transition:all 1.5s ease 2s;
 }
 .mainIndex .introd {
     width: 5.99rem;
@@ -173,5 +179,5 @@
     left:0.78rem;
     top: 4.35rem;
     opacity: 0;
-    transition:all 1s ease 0.5s;
+    transition:all 1.5s ease 1s;
 }

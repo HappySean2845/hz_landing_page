@@ -26,7 +26,7 @@
 </head>
 <body>
 <div class="container" id="container">
-    <div class="firstAd">
+    <div class="firstAd" style="display: none">
         <div class="music_play"><img src="img/music_play_03.png"></div>
         <div class="steps">
             <div class="step step_1">
@@ -71,8 +71,11 @@
         <div class="touchIcon" id="touchIcon"></div>
         <div class="touchLine"></div>
     </div>
-    <div id="arScene" class="arScene" style="display: none;">
+    <div id="arScene" class="arScene" >
     </div>
+    <div class="layer layer_1"></div>
+    <div class="layer layer_2"></div>
+    <div class="layer layer_3"></div>
     <div  class="ar_item_1" id="ar_item_1"></div>
     <div  class="ar_item_2" id="ar_item_2"></div>
     <div  class="ar_item_3" id="ar_item_3"></div>
@@ -160,11 +163,7 @@
       }
       preventString(event);
     })
-    var s = new C3D.Stage();
-    s.size(window.innerWidth, window.innerHeight).material({
-      color: "rgba(0,0,0,0)"
-    }).update();
-    document.getElementById("arScene").appendChild(s.el);
+
     $(".music_btn").on("click",function () {
       console.log("click");
       $('.firstAd').fadeOut(800);
@@ -182,46 +181,112 @@
         $(".mainBar").fadeIn(800);
       }
     })
+    setTimeout(function () {
+      $("#container").addClass("animate");
+    },500)
     //创建场景
+    var s = new C3D.Stage();
+    s.size(window.innerWidth, window.innerHeight).material({
+      color: "rgba(0,0,0,0)"
+    }).update();
+    document.getElementById("arScene").appendChild(s.el);
+    //创建立方图
+    var panoRect = {w: 1200, h: 800};
+    var bgData = [
+      {url: 'img/item_1_02.png'},
+      {url: 'img/item_2_03.png'},
+      {url: 'img/item_3_03.png'},
+      {url: 'img/item_4_03.png'},
+      {url: 'img/item_5_03.png'},
+      {url: 'img/item_6_03.png'},
+      {url: 'img/item_7_03.png'},
+      {url: 'img/item_8_03.png'},
+      {url: 'img/item_9_03.png'},
+      {url: 'img/item_10_03.png'},
+      {url: 'img/item_11_03.png'},
+      {url: 'img/item_12_03.png'},
+      {url: 'img/item_13_03.png'},
+      {url: 'img/item_14_03.png'},
+      {url: 'img/item_15_03.png'},
+      {url: 'img/item_17_03.png'},
+      {url: 'img/item_18_03.png'},
+      {url: 'img/item_19_03.png'},
+      {url: 'img/item_20_03.png'},
+    ];
+    function createPano(imgs, rect) {
+      var _len = imgs.length;
+      var _step = rect.w / _len;
+      var _radius = Math.floor(_step / 2 / Math.tan(Math.PI / _len)) - 1;
+      var _sp = new C3D.Sprite();
+      for (var i = 0; i < _len; i++) {
+        var _p = new C3D.Plane();
+        var _r = 360 / _len * i;
+        var _a = Math.PI * 2 / _len * i;
+        _p.size(_step, rect.h).position(Math.sin(_a) * _radius, 0, -Math.cos(_a) * _radius).rotation(0, -_r, 0).material({
+          image: imgs[i].url,
+          repeat: 'no-repeat',
+          bothsides: false,
+        }).update();
+        _sp.addChild(_p);
+      }
+      return _sp;
+    }
+
     var scene = C3D.create({
       type: 'sprite', position: [0, 0, -s.fov], children: [
         {
           type: 'plane',
           el: document.getElementById('ar_item_1'),
           name: 'p1',
-          size: [150],
-          position: [100, -30, 0],
-          rotation: [20, 0, 0],
+          size: [200],
+          position: [-400, 300, 0],
+          rotation: [0, 0, 0],
         },
         {
           type: 'plane',
           el: document.getElementById('ar_item_2'),
           name: 'p2',
-          size: [150],
-          position: [-100, -150, 0],
-          rotation: [20, 0, 0],
-//          material: [{color: C3D.getRandomColor()}]
+          size: [200],
+          position: [120, 200, 0],
+          rotation: [0, 0, 0],
         },
         {
           type: 'plane',
           el: document.getElementById('ar_item_3'),
           name: 'p3',
-          size: [150],
-          position: [-100, 150, 0],
-          rotation: [20, 0, 0],
-//          material: [{color: C3D.getRandomColor()}]
+          size: [200],
+          position: [900, 300, 0],
+          rotation: [0, 0, 0],
         },
       ]
     });
-    setTimeout(function () {
-      $("#container").addClass("animate");
-    },500)
-    s.addChild(scene);
-    requestAnimationFrame = window.requestAnimationFrame || window.mozRequestAnimationFrame || window.webkitRequestAnimationFrame || window.msRequestAnimationFrame || window.oRequestAnimationFrame;
+
+    scene.p1.on("click",function () {
+      console.log("p1")
+    })
+    scene.p2.on("click",function () {
+      console.log("p2")
+    })
+    scene.p3.on("click",function () {
+      console.log("p3")
+    })
+    var pano = createPano(bgData, panoRect);
+    pano.position(0, -200, -400).updateT();
+    pano.addChild(scene);
+    s.addChild(pano);
+//    s.addChild(scene);
+    //刷新场景
+    requestAnimationFrame = window.requestAnimationFrame || window.mozRequestAnimationFrame || window.webkitRequestAnimationFrame || window.msRequestAnimationFrame || window.oRequestAnimationFrame ||
+      function (callback) {
+        setTimeout(callback, 1000 / 60);
+      };
     function go() {
-      scene.rotate(0, 1, 0).updateT();
-      scene.p3.rotate(-1, 0, 0).updateT();
+      pano.rotate(0, 0.1, 0).updateT();
+//      requestAnimationFrame(go);
+//      scene.rotate(0, 1, 0).updateT();
+//      scene.p3.rotate(-1, 0, 0).updateT();
       requestAnimationFrame(go);
+
     }
     requestAnimationFrame(go);
   })

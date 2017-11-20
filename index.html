@@ -16,17 +16,19 @@
     <meta name="browsermode" content="application">
     <meta name="x5-page-mode" content="app">
     <meta name="msapplication-tap-highlight" content="no">
-    <title>华住酒店</title>
+    <title>听见不同 想住就住</title>
     <link rel="stylesheet" href="css/clean.css">
     <link rel="stylesheet" href="css/music.css">
     <link rel="stylesheet" href="css/main.css">
     <script type="text/javascript" src="bower_components/jquery2/jquery.min.js"></script>
+    <script src="http://res.wx.qq.com/open/js/jweixin-1.0.0.js"></script>
     <script type="text/javascript" src="js/css3d.js"></script>
     <script type="text/javascript" src="js/swip.js"></script>
+    <script type="text/javascript" src="js/share.js"></script>
 </head>
 <body>
 <div class="container" id="container">
-    <div class="firstAd" style="display: none">
+    <div class="firstAd" style="">
         <div class="music_play"><img src="img/music_play_03.png"></div>
         <div class="steps">
             <div class="step step_1">
@@ -56,13 +58,13 @@
         </div>
     </div>
 
-    <div class="mainIndex" style="display: none;">
+    <div class="mainIndex hide">
         <div class="logo"><img src="img/index_logo_03.png"></div>
         <div class="img"><img src="img/index_img_03.png"></div>
         <div class="introd"><img src="img/index_introd_03.png"></div>
         <div class="handpull bounceDom"><img src="img/handpull.png" alt=""></div>
     </div>
-    <div class="mainBar" style="display: none" id="mainBar">
+    <div class="mainBar hide" id="mainBar">
         <div class="barItem barItem-1"><img src="img/bar_item1_07.png" alt=""></div>
         <div class="barItem barItem-2"><img src="img/bar_item2_11.png" alt=""></div>
         <div class="barItem barItem-3"><img src="img/bar_item3_15.png" alt=""></div>
@@ -71,14 +73,14 @@
         <div class="touchIcon" id="touchIcon"></div>
         <div class="touchLine"></div>
     </div>
-    <div id="arScene" class="arScene" >
+    <div id="arScene" class="arScene hide" >
+    <div  class="ar_item_1" id="ar_item_1"></div>
+    <div  class="ar_item_2" id="ar_item_2"></div>
+    <div  class="ar_item_3" id="ar_item_3"></div>
     </div>
     <div class="layer layer_1"></div>
     <div class="layer layer_2"></div>
     <div class="layer layer_3"></div>
-    <div  class="ar_item_1" id="ar_item_1"></div>
-    <div  class="ar_item_2" id="ar_item_2"></div>
-    <div  class="ar_item_3" id="ar_item_3"></div>
 </div>
 <script type="text/javascript" src="js/main.js"></script>
 <script>
@@ -232,47 +234,47 @@
       return _sp;
     }
 
-    var scene = C3D.create({
-      type: 'sprite', position: [0, 0, -s.fov], children: [
-        {
-          type: 'plane',
-          el: document.getElementById('ar_item_1'),
-          name: 'p1',
-          size: [200],
-          position: [-400, 300, 0],
-          rotation: [0, 0, 0],
-        },
-        {
-          type: 'plane',
-          el: document.getElementById('ar_item_2'),
-          name: 'p2',
-          size: [200],
-          position: [120, 200, 0],
-          rotation: [0, 0, 0],
-        },
-        {
-          type: 'plane',
-          el: document.getElementById('ar_item_3'),
-          name: 'p3',
-          size: [200],
-          position: [900, 300, 0],
-          rotation: [0, 0, 0],
-        },
-      ]
-    });
+    // var scene = C3D.create({
+    //   type: 'sprite', position: [0, 0, -s.fov], children: [
+    //     {
+    //       type: 'plane',
+    //       el: document.getElementById('ar_item_1'),
+    //       name: 'p1',
+    //       size: [400],
+    //       position: [-400, 300, 0],
+    //       rotation: [0, 0, 0],
+    //     },
+    //     {
+    //       type: 'plane',
+    //       el: document.getElementById('ar_item_2'),
+    //       name: 'p2',
+    //       size: [400],
+    //       position: [120, 200, 0],
+    //       rotation: [0, 0, 0],
+    //     },
+    //     {
+    //       type: 'plane',
+    //       el: document.getElementById('ar_item_3'),
+    //       name: 'p3',
+    //       size: [040],
+    //       position: [900, 300, 0],
+    //       rotation: [0, 0, 0],
+    //     },
+    //   ]
+    // });
 
-    scene.p1.on("click",function () {
-      console.log("p1")
-    })
-    scene.p2.on("click",function () {
-      console.log("p2")
-    })
-    scene.p3.on("click",function () {
-      console.log("p3")
-    })
+    // scene.p1.on("click",function () {
+    //   console.log("p1")
+    // })
+    // scene.p2.on("click",function () {
+    //   console.log("p2")
+    // })
+    // scene.p3.on("click",function () {
+    //   console.log("p3")
+    // })
     var pano = createPano(bgData, panoRect);
     pano.position(0, -200, -400).updateT();
-    pano.addChild(scene);
+    // pano.addChild(scene);
     s.addChild(pano);
 //    s.addChild(scene);
     //刷新场景

@@ -32,11 +32,11 @@ wx.ready(function() {
     addWeiXinEvent(0);
 });
 var addWeiXinEvent = function(index) {
-    $.timelineTitle = "分手一年的前男友发来消息";
-    $.shareAppDesc = "他居然想问我这个？！";
-    $.shareAppTitle = "分手一年的前男友发来消息";
+    $.timelineTitle = "听见不同 想住就住";
+    $.shareAppDesc = "想与你不期而遇在爱乐之途";
+    $.shareAppTitle = "听见不同 想住就住";
     $.shareUrl = window.location.href
-    $.shareImage = "http://www.adleading.com/adleading_video/bestpay/images/share.png";
+    $.shareImage = "http://www.adleading.com/huazhu/landing_page/img/share.jpg";
     wx.onMenuShareAppMessage({
         title: $.shareAppTitle,
         desc: $.shareAppDesc,

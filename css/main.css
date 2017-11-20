@@ -3,7 +3,7 @@
     position: relative;
 }
 
-
+.hide {display:none;}
 
 .arScene{
     width:100%;
@@ -135,6 +135,42 @@
     background-size: 100% 100%;
     background-repeat: no-repeat;
 }
+.ar_item_1{
+    width: 3.06rem;
+    height: 3.16rem;
+    background: url(../img/ar_icon_1_03.png);
+    background-size: 100% 100%;
+    background-repeat: no-repeat;
+    position: absolute;
+    z-index: 20;
+    top: 1rem;
+    right: 1rem;
+    -webkit-animation:move_1 2s linear infinite;
+}
+.ar_item_2{
+    width: 3.06rem;
+    height: 3.16rem;
+    background: url(../img/ar_icon2_03.png);
+    background-size: 100% 100%;
+    background-repeat: no-repeat;
+    position: absolute;
+    z-index: 20;
+    top: 3.8rem;
+    left: 0.43rem;
+    -webkit-animation:move_2 2s linear infinite;
+}
+.ar_item_3{
+    width: 3.06rem;
+    height: 3.16rem;
+    background: url(../img/ar_icon_3_03.png);
+    background-size: 100% 100%;
+    background-repeat: no-repeat;
+    position: absolute;
+    z-index: 20;
+    top: 6.5rem;
+    right: 1rem;
+    -webkit-animation:move_3 2s linear infinite;
+}
 
 .mainIndex{
     position: absolute;
@@ -227,4 +263,22 @@
     background:url("../img/layer_3.jpg");
     background-repeat:no-repeat;
     background-size: 100% 100%;
+}
+@-webkit-keyframes move_1{
+    0%{transform:translateY(0rem)}
+    33%{transform:translateY(0.1rem)}
+    66%{transform:translateY(-0.1rem)}
+    100%{transform:translateY(0rem)}
+}
+@-webkit-keyframes move_2{
+    0%{transform:scale(1)}
+    33%{transform:scale(0.97)}
+    66%{transform:scale(1.03)}
+    100%{transform:scale(1)}
+}
+@-webkit-keyframes move_3{
+    0%{transform:translateY(0rem)}
+    20%{transform:translateY(-0.1rem)}
+    80%{transform:translateY(0.1rem)}
+    100%{transform:translateY(0rem)}
 }

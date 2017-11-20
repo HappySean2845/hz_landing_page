@@ -13,7 +13,7 @@ body{
     position: absolute;
     left: 3.11rem;
     top:9.04rem;
-    transition:all 1s ease 7s;
+    transition:opacity 1s ease 7s;
     opacity: 0;
 }
 .music_start img{
@@ -27,7 +27,7 @@ body{
      position: absolute;
      left: 0.645rem;
      top:9.49rem;
-    transition:all 1s ease 7.8s;
+    transition:opacity 1s ease 7.8s;
     opacity: 0;
 }
 .music_btn img{
@@ -76,6 +76,7 @@ body{
     width: 6.21rem;
     left: 0.645rem;
     transition:all 1.5s ease 1s;
+    transition-property:opacity,margin;
 }
 .steps .step_1{
     background:url("../img/step_1_bg_03.png");
@@ -139,12 +140,14 @@ body{
     left: 0.84rem;
     top: 0.37rem;
     transition:all 1.5s ease 2.5s;
+    transition-property:opacity,margin;
 }
 .steps .step_2 img.wordText{
     width:3.23rem;
     left: 1.4rem;
     top: 0.09rem;
     transition:all 1.5s ease 3s;
+    transition-property:opacity,margin;
 
 }
 .steps .step_3 img.wordText{
@@ -152,6 +155,7 @@ body{
     left: 1.71rem;
     top: 0.17rem;
     transition:all 1.5s ease 3.5s;
+    transition-property:opacity,margin;
 
 }
 .steps .step_4 img.wordText{
@@ -159,6 +163,7 @@ body{
     left: 2.18rem;
     top: 0.17rem;
     transition:all 1.5s ease 4s;
+    transition-property:opacity,margin;
 
 }
 .steps .step_5 img.wordText{
@@ -166,12 +171,14 @@ body{
     left: 1.02rem;
     top: 0.17rem;
     transition:all 1.5s ease 4.5s;
+    transition-property:opacity,margin;
 }
 .steps .step_6 img.wordText{
     width:2.50rem;
     left: 1.78rem;
     top: 0.17rem;
     transition:all 1.5s ease 5s;
+    transition-property:opacity,margin;
 }
 .steps .step img.wordText{
     position: absolute;

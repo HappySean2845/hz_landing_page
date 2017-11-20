@@ -18,16 +18,49 @@
     <meta name="msapplication-tap-highlight" content="no">
     <title>华住酒店</title>
     <link rel="stylesheet" href="css/clean.css">
+    <link rel="stylesheet" href="css/music.css">
     <link rel="stylesheet" href="css/main.css">
     <script type="text/javascript" src="bower_components/jquery2/jquery.min.js"></script>
     <script type="text/javascript" src="js/css3d.js"></script>
+    <script type="text/javascript" src="js/swip.js"></script>
 </head>
 <body>
 <div class="container" id="container">
-    <div class="mainIndex" >
+    <div class="firstAd">
+        <div class="music_play"><img src="img/music_play_03.png"></div>
+        <div class="steps">
+            <div class="step step_1">
+                <img class="wordText" alt="" src="img/word_text_1_03.png">
+            </div>
+            <div class="step step_2">
+                <img class="wordText" alt="" src="img/word_text_2_03.png">
+            </div>
+            <div class="step step_3">
+                <img class="wordText" alt="" src="img/word_text_3_11.png">
+            </div>
+            <div class="step step_4">
+                <img class="wordText" alt="" src="img/word_text_4_15.png">
+            </div>
+            <div class="step step_5">
+                <img class="wordText" alt="" src="img/word_text_5_19.png">
+            </div>
+            <div class="step step_6">
+                <img class="wordText" alt="" src="img/word_text_6_23.png">
+            </div>
+        </div>
+        <div class="music_start">
+            <img src="img/music_open_03.png" alt="">
+        </div>
+        <div class="music_btn">
+            <img src="img/music_btn_03.png" alt="">
+        </div>
+    </div>
+
+    <div class="mainIndex" style="display: none;">
         <div class="logo"><img src="img/index_logo_03.png"></div>
         <div class="img"><img src="img/index_img_03.png"></div>
         <div class="introd"><img src="img/index_introd_03.png"></div>
+        <div class="handpull bounceDom"><img src="img/handpull.png" alt=""></div>
     </div>
     <div class="mainBar" style="display: none" id="mainBar">
         <div class="barItem barItem-1"><img src="img/bar_item1_07.png" alt=""></div>
@@ -60,16 +93,6 @@
   $(function () {
     var windowHeight = $(window).height();
     $("#container").css("height", windowHeight);
-    setTimeout(function () {
-      $(".mainIndex").addClass("animate");
-      return drawNext();
-    },300)
-    function drawNext() {
-      return setTimeout(function () {
-        $(".mainIndex").fadeOut(800);
-        $("#mainBar").fadeIn(800);
-      },3800)
-    }
     function preventString(e) {
       return e.preventDefault()&&e.stopPropagation();
     }
@@ -79,9 +102,7 @@
     var maxCoundTouch = windowHeight - 0 - $(touchIcon)[0].clientHeight*1;
     //开始拖动
     touchIcon.addEventListener("touchstart",function (event) {
-
       console.log("开始拖动",event);
-
       maxCoundTouch = windowHeight - 0 - $(touchIcon)[0].clientHeight*1;
       touchObj.bgTransHeight = parseInt(window.fontSize*30.93)-windowHeight;
       touchObj.startY =
@@ -144,6 +165,23 @@
       color: "rgba(0,0,0,0)"
     }).update();
     document.getElementById("arScene").appendChild(s.el);
+    $(".music_btn").on("click",function () {
+      console.log("click");
+      $('.firstAd').fadeOut(800);
+      $('.mainIndex').fadeIn(800);
+      setTimeout(function () {
+        $(".mainIndex").addClass("animate");
+//        return drawNext();
+      },600)
+    })
+    $(".mainIndex").drag(function(e){
+//      console.log("drag")
+      console.log(e);
+      if(e.dy<=-100){
+        $(".mainIndex").fadeOut(800);
+        $(".mainBar").fadeIn(800);
+      }
+    })
     //创建场景
     var scene = C3D.create({
       type: 'sprite', position: [0, 0, -s.fov], children: [
@@ -175,6 +213,9 @@
         },
       ]
     });
+    setTimeout(function () {
+      $("#container").addClass("animate");
+    },500)
     s.addChild(scene);
     requestAnimationFrame = window.requestAnimationFrame || window.mozRequestAnimationFrame || window.webkitRequestAnimationFrame || window.msRequestAnimationFrame || window.oRequestAnimationFrame;
     function go() {

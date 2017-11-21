@@ -50,6 +50,18 @@
 .mainBar .barItem img{
     width: 100%;
 }
+.mainBar .barItem-1.up{
+    margin-top:-30px;
+}
+.mainBar .barItem-1.up{
+    margin-top:-30px;
+}
+.mainBar .barItem-1.up{
+    margin-top:-30px;
+}
+.mainBar .barItem-1.up{
+    margin-top:-30px;
+}
 .mainBar .barItem-1{
     width: 2.85rem;
     left: 0;
@@ -140,22 +152,22 @@
     background-repeat: no-repeat;
 }
  .ar_item_2{
-    width: 3.06rem;
-    height: 3.16rem;
+    width: 4.12rem;
+    height: 3.58rem;
     background: url("../img/ar_icon2_03.png");
     background-size: 100% 100%;
     background-repeat: no-repeat;
 }
  .ar_item_3{
-    width: 3.06rem;
-    height: 3.16rem;
+    width: 3.37rem;
+    height: 3.91rem;
     background: url("../img/ar_icon_3_03.png");
     background-size: 100% 100%;
     background-repeat: no-repeat;
 }
 .ar_item_1{
-    width: 3.06rem;
-    height: 3.16rem;
+    width: 3.55rem;
+    height: 3.93rem;
     background: url(../img/ar_icon_1_03.png);
     background-size: 100% 100%;
     background-repeat: no-repeat;
@@ -234,7 +246,7 @@
     left: 0.59rem;
     top: 1.56rem;
     opacity: 0;
-    transition:opacity 1.5s ease 2s;
+    transition:opacity 1.5s ease 3s;
     transition-property:opacity,margin;
 }
 .mainIndex .introd {
@@ -254,7 +266,7 @@
     left:50%;
     margin-left: -1.45rem;
     top: 8.15rem;
-    transition:opacity 1.5s ease 3s;
+    transition:opacity 1.5s ease 2s;
     margin-top:50px;
     transition-property:opacity,margin;
     opacity: 0;

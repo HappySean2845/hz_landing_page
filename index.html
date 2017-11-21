@@ -23,6 +23,7 @@
     <script type="text/javascript" src="bower_components/jquery2/jquery.min.js"></script>
     <script src="http://res.wx.qq.com/open/js/jweixin-1.0.0.js"></script>
     <script type="text/javascript" src="js/css3d.js"></script>
+    <script type="text/javascript" src="js/parallax.js"></script>
     <script type="text/javascript" src="js/swip.js"></script>
     <script type="text/javascript" src="js/share.js"></script>
 </head>
@@ -79,10 +80,17 @@
         <div class="clickMsg">
             <img src="img/chickmsg_04.png" alt="">
         </div>
-        <div  class="ar_item_1" id="ar_item_1"></div>
-        <div  class="ar_item_2" id="ar_item_2"></div>
-        <div  class="ar_item_3" id="ar_item_3"></div>
+
+
+        <div class="pScene" id="pScene" class="" data-limit-y="0" data-scalar-x="60" style="position: absolute;width: 100%;height: 100%;">
+            <div  class="ar_item_1" id="ar_item_1" data-depth="0.20"></div>
+            <div  class="ar_item_2" id="ar_item_2" data-depth="0.25"></div>
+            <div  class="ar_item_3" id="ar_item_3" data-depth="0.30"></div>
+        </div>
     </div>
+
+
+
     <div class="layer layer_1"></div>
     <div class="layer layer_2"></div>
     <div class="layer layer_3"></div>
@@ -157,6 +165,10 @@
       preventString(event);
     })
     //持续拖动
+    var scene = $('#pScene').get(0)
+    var parallax = new Parallax(scene,{
+      pointerEvents: true,
+    });
     touchIcon.addEventListener("touchend",function (event) {
       console.log("拖动距离", touchObj.touchY,'最大可拖动距离',maxCoundTouch);
       //设置最大偏移误差为10px
@@ -209,25 +221,21 @@
     //创建立方图
     var panoRect = {w: 1200, h: 800};
     var bgData = [
-      {url: 'img/item_1_02.png'},
-      {url: 'img/item_2_03.png'},
-      {url: 'img/item_3_03.png'},
-      {url: 'img/item_4_03.png'},
-      {url: 'img/item_5_03.png'},
-      {url: 'img/item_6_03.png'},
-      {url: 'img/item_7_03.png'},
-      {url: 'img/item_8_03.png'},
-      {url: 'img/item_9_03.png'},
-      {url: 'img/item_10_03.png'},
-      {url: 'img/item_11_03.png'},
-      {url: 'img/item_12_03.png'},
-      {url: 'img/item_13_03.png'},
-      {url: 'img/item_14_03.png'},
-      {url: 'img/item_15_03.png'},
-      {url: 'img/item_17_03.png'},
-      {url: 'img/item_18_03.png'},
-      {url: 'img/item_19_03.png'},
-      {url: 'img/item_20_03.png'},
+      {url: 'img/line_01.png',b_url:'img/b_01.png',z_url:'img/z_01.png'},
+      {url: 'img/line_02.png',b_url:'img/b_02.png',z_url:'img/z_02.png'},
+      {url: 'img/line_03.png',b_url:'img/b_03.png',z_url:'img/z_03.png'},
+      {url: 'img/line_04.png',b_url:'img/b_04.png',z_url:'img/z_04.png'},
+      {url: 'img/line_05.png',b_url:'img/b_05.png',z_url:'img/z_05.png'},
+      {url: 'img/line_06.png',b_url:'img/b_06.png',z_url:'img/z_06.png'},
+      {url: 'img/line_07.png',b_url:'img/b_07.png',z_url:'img/z_07.png'},
+      {url: 'img/line_08.png',b_url:'img/b_08.png',z_url:'img/z_08.png'},
+      {url: 'img/line_09.png',b_url:'img/b_09.png',z_url:'img/z_09.png'},
+      {url: 'img/line_10.png',b_url:'img/b_10.png',z_url:'img/z_10.png'},
+      {url: 'img/line_11.png',b_url:'img/b_11.png',z_url:'img/z_11.png'},
+      {url: 'img/line_12.png',b_url:'img/b_12.png',z_url:'img/z_12.png'},
+      {url: 'img/line_13.png',b_url:'img/b_13.png',z_url:'img/z_13.png'},
+      {url: 'img/line_14.png',b_url:'img/b_14.png',z_url:'img/z_14.png'},
+      {url: 'img/line_15.png',b_url:'img/b_15.png',z_url:'img/z_15.png'},
     ];
     function createPano(imgs, rect) {
       var _len = imgs.length;
@@ -247,11 +255,51 @@
       }
       return _sp;
     }
+    function createPanoB(imgs, rect) {
+      var _len = imgs.length;
+      var _step = rect.w / _len;
+      var _radius = Math.floor(_step / 2 / Math.tan(Math.PI / _len)) - 1;
+      var _sp = new C3D.Sprite();
+      for (var i = 0; i < _len; i++) {
+        var _p = new C3D.Plane();
+        var _r = 360 / _len * i;
+        var _a = Math.PI * 2 / _len * i;
+        _p.size(_step, rect.h).position(Math.sin(_a) * _radius, 0, -Math.cos(_a) * _radius).rotation(0, -_r, 0).material({
+          image: imgs[i].b_url,
+          repeat: 'no-repeat',
+          bothsides: false,
+        }).update();
+        _sp.addChild(_p);
+      }
+      return _sp;
+    }
+    function createPanoZ(imgs, rect) {
+      var _len = imgs.length;
+      var _step = rect.w / _len;
+      var _radius = Math.floor(_step / 2 / Math.tan(Math.PI / _len)) - 1;
+      var _sp = new C3D.Sprite();
+      for (var i = 0; i < _len; i++) {
+        var _p = new C3D.Plane();
+        var _r = 360 / _len * i;
+        var _a = Math.PI * 2 / _len * i;
+        _p.size(_step, rect.h).position(Math.sin(_a) * _radius, 0, -Math.cos(_a) * _radius).rotation(0, -_r, 0).material({
+          image: imgs[i].z_url,
+          repeat: 'no-repeat',
+          bothsides: false,
+        }).update();
+        _sp.addChild(_p);
+      }
+      return _sp;
+    }
     var pano = createPano(bgData, panoRect);
+    var panoB = createPanoB(bgData, panoRect);
+    var panoZ = createPanoZ(bgData, panoRect);
     pano.position(0, -200, -400).updateT();
-    // pano.addChild(scene);
+    panoB.position(0, -200, -350).updateT();
+    panoZ.position(0, -200, -380).updateT();
     s.addChild(pano);
-//    s.addChild(scene);
+    s.addChild(panoB);
+    s.addChild(panoZ)
     //刷新场景
     requestAnimationFrame = window.requestAnimationFrame || window.mozRequestAnimationFrame || window.webkitRequestAnimationFrame || window.msRequestAnimationFrame || window.oRequestAnimationFrame ||
       function (callback) {
@@ -259,6 +307,9 @@
       };
     function go() {
       pano.rotate(0, 0.1, 0).updateT();
+      panoB.rotate(0, 0.12, 0).updateT();
+      panoZ.rotate(0, 0.13, 0).updateT();
+
 //      requestAnimationFrame(go);
 //      scene.rotate(0, 1, 0).updateT();
 //      scene.p3.rotate(-1, 0, 0).updateT();

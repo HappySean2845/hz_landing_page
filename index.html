@@ -88,15 +88,43 @@
             <div  class="ar_item_3" id="ar_item_3" data-depth="0.30"></div>
         </div>
     </div>
+<<<<<<< HEAD
 
 
 
     <div class="layer layer_1"></div>
     <div class="layer layer_2"></div>
     <div class="layer layer_3"></div>
+=======
+    <div class="layer layer_1">
+      <img data-depth="0.00" src="img/layer/txt_1.png">
+      <img data-depth="0.20" src="img/layer/obj_1.png">
+    </div>
+    <div class="layer layer_2">
+      <img data-depth="0.00" src="img/layer/txt_2.png">
+      <img data-depth="0.20" src="img/layer/obj_2.png">
+    </div>
+    <div class="layer layer_3">
+      <img data-depth="0.00" src="img/layer/txt_3.png">
+      <img data-depth="0.20" src="img/layer/obj_3.png">
+    </div>
+>>>>>>> 9303fa27c8e57c9ebea39afcafebd0e8a98c5e10
 </div>
 <script type="text/javascript" src="js/main.js"></script>
+<script type="text/javascript" src="js/parallax.js"></script>
 <script>
+  var scene_1 = $('.layer_1').get(0)
+  var parallax = new Parallax(scene_1, {
+    pointerEvents: true,
+  });
+  var scene_2 = $('.layer_2').get(0)
+  var parallax = new Parallax(scene_2, {
+    pointerEvents: true,
+  });
+  var scene_3 = $('.layer_3').get(0)
+  var parallax = new Parallax(scene_3, {
+    pointerEvents: true,
+  });
   function size() {
     var _screenWidth = document.documentElement.clientWidth < 300 ? 300 : document.documentElement.clientWidth,
       _UIWidth = 750,

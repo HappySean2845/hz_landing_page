@@ -2,74 +2,23 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="8906d953-9cef-4271-9dc9-44b018696e2b" name="Default" comment="">
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/img/b_01.png" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/img/b_02.png" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/img/b_03.png" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/img/b_04.png" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/img/b_05.png" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/img/b_06.png" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/img/b_07.png" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/img/b_08.png" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/img/b_09.png" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/img/b_10.png" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/img/b_11.png" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/img/b_12.png" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/img/b_13.png" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/img/b_14.png" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/img/b_15.png" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/img/line_01.png" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/img/line_02.png" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/img/line_03.png" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/img/line_04.png" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/img/line_05.png" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/img/line_06.png" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/img/line_07.png" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/img/line_08.png" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/img/line_09.png" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/img/line_10.png" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/img/line_11.png" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/img/line_12.png" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/img/line_13.png" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/img/line_14.png" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/img/line_15.png" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/img/z_01.png" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/img/z_02.png" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/img/z_03.png" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/img/z_04.png" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/img/z_05.png" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/img/z_06.png" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/img/z_07.png" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/img/z_08.png" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/img/z_09.png" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/img/z_10.png" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/img/z_11.png" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/img/z_12.png" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/img/z_13.png" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/img/z_14.png" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/img/z_15.png" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/js/parallax.js" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/img/item_10_03.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/img/item_11_03.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/img/item_12_03.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/img/item_13_03.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/img/item_14_03.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/img/item_15_03.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/img/item_17_03.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/img/item_18_03.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/img/item_19_03.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/img/item_1_02.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/img/item_20_03.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/img/item_2_03.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/img/item_3_03.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/img/item_4_03.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/img/item_5_03.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/img/item_6_03.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/img/item_7_03.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/img/item_8_03.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/img/item_9_03.png" afterPath="" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/img/layer/bg_1.jpg" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/img/layer/bg_2.jpg" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/img/layer/bg_3.jpg" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/img/layer/obj_1.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/img/layer/obj_2.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/img/layer/obj_3.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/img/layer/txt_1.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/img/layer/txt_2.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/img/layer/txt_3.png" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/img/layer_1.jpg" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/img/layer_2.jpg" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/img/layer_3.jpg" afterPath="" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/img/word_text_2_03.png" afterPath="$PROJECT_DIR$/img/word_text_2_03.png" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/css/main.css" afterPath="$PROJECT_DIR$/css/main.css" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/index.html" afterPath="$PROJECT_DIR$/index.html" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/js/parallax.js" afterPath="$PROJECT_DIR$/js/parallax.js" />
     </list>
     <ignored path="$PROJECT_DIR$/.tmp/" />
     <ignored path="$PROJECT_DIR$/temp/" />
@@ -90,8 +39,8 @@
       <file leaf-file-name="index.html" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/index.html">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="406">
-              <caret line="88" column="14" lean-forward="false" selection-start-line="88" selection-start-column="14" selection-end-line="88" selection-end-column="14" />
+            <state relative-caret-position="366">
+              <caret line="86" column="75" lean-forward="true" selection-start-line="86" selection-start-column="75" selection-end-line="86" selection-end-column="75" />
               <folding>
                 <element signature="n#style#0;n#div#1;n#div#2;n#div#0;n#body#0;n#html#0;n#!!top" expanded="true" />
               </folding>
@@ -104,7 +53,9 @@
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="181">
               <caret line="164" column="8" lean-forward="false" selection-start-line="164" selection-start-column="8" selection-end-line="164" selection-end-column="8" />
-              <folding />
+              <folding>
+                <marker date="1511284949000" expanded="true" signature="6173:6275" ph="{...}" />
+              </folding>
             </state>
           </provider>
         </entry>
@@ -362,16 +313,15 @@
       <updated>1510651197094</updated>
       <workItem from="1510651198762" duration="1786000" />
       <workItem from="1510662631905" duration="21856000" />
-      <workItem from="1511101295958" duration="30371000" />
+      <workItem from="1511101295958" duration="30515000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="54013000" />
+    <option name="totallyTimeSpent" value="54157000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="46" y="25" width="1440" height="839" extended-state="0" />
-    <editor active="true" />
     <layout>
       <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.20366456" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
       <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
@@ -380,7 +330,7 @@
       <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="10" side_tool="false" content_ui="tabs" />
       <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
-      <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32931727" sideWeight="0.5" order="9" side_tool="false" content_ui="tabs" />
+      <window_info id="Terminal" active="true" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.32931727" sideWeight="0.5" order="9" side_tool="false" content_ui="tabs" />
       <window_info id="Favorites" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="true" content_ui="tabs" />
       <window_info id="Debug" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.4" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
       <window_info id="Cvs" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="5" side_tool="false" content_ui="tabs" />
@@ -411,6 +361,42 @@
           <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
           <folding>
             <element signature="n#style#0;n#div#1;n#div#2;n#div#0;n#body#0;n#html#0;n#!!top" expanded="true" />
+            <marker date="1511284949000" expanded="true" signature="5353:13885" ph="..." />
+            <marker date="1511284949000" expanded="true" signature="5372:5671" ph="{...}" />
+            <marker date="1511284949000" expanded="true" signature="5714:5731" ph="{...}" />
+            <marker date="1511284949000" expanded="true" signature="5872:5933" ph="{...}" />
+            <marker date="1511284949000" expanded="true" signature="6190:6530" ph="{...}" />
+            <marker date="1511284949000" expanded="true" signature="6603:8056" ph="{...}" />
+            <marker date="1511284949000" expanded="true" signature="6793:7987" ph="{...}" />
+            <marker date="1511284949000" expanded="true" signature="7244:7348" ph="{...}" />
+            <marker date="1511284949000" expanded="true" signature="7401:7505" ph="{...}" />
+            <marker date="1511284949000" expanded="true" signature="7554:7658" ph="{...}" />
+            <marker date="1511284949000" expanded="true" signature="7707:7811" ph="{...}" />
+            <marker date="1511284949000" expanded="true" signature="7861:7916" ph="{...}" />
+            <marker date="1511284949000" expanded="true" signature="7920:7978" ph="{...}" />
+            <marker date="1511284949000" expanded="true" signature="7991:8022" ph="{...}" />
+            <marker date="1511284949000" expanded="true" signature="8143:8177" ph="{...}" />
+            <marker date="1511284949000" expanded="true" signature="8239:8894" ph="{...}" />
+            <marker date="1511284949000" expanded="true" signature="8377:8500" ph="{...}" />
+            <marker date="1511284949000" expanded="true" signature="8504:8860" ph="{...}" />
+            <marker date="1511284949000" expanded="true" signature="8735:8846" ph="{...}" />
+            <marker date="1511284949000" expanded="true" signature="8940:9160" ph="{...}" />
+            <marker date="1511284949000" expanded="true" signature="9068:9149" ph="{...}" />
+            <marker date="1511284949000" expanded="true" signature="9186:9484" ph="{...}" />
+            <marker date="1511284949000" expanded="true" signature="9217:9472" ph="{...}" />
+            <marker date="1511284949000" expanded="true" signature="9352:9459" ph="{...}" />
+            <marker date="1511284949000" expanded="true" signature="9512:9562" ph="{...}" />
+            <marker date="1511284949000" expanded="true" signature="9667:9703" ph="{&quot;color&quot;: &quot;rgba(0,0,0,0)&quot;...}" />
+            <marker date="1511284949000" expanded="true" signature="9840:10957" ph="[...]" />
+            <marker date="1511284949000" expanded="true" signature="10995:11605" ph="{...}" />
+            <marker date="1511284949000" expanded="true" signature="11205:11581" ph="{...}" />
+            <marker date="1511284949000" expanded="true" signature="11436:11536" ph="{&quot;repeat&quot;: 'no-repeat'...}" />
+            <marker date="1511284949000" expanded="true" signature="11643:12255" ph="{...}" />
+            <marker date="1511284949000" expanded="true" signature="11853:12231" ph="{...}" />
+            <marker date="1511284949000" expanded="true" signature="12084:12186" ph="{&quot;repeat&quot;: 'no-repeat'...}" />
+            <marker date="1511284949000" expanded="true" signature="12293:12905" ph="{...}" />
+            <marker date="1511284949000" expanded="true" signature="12503:12881" ph="{...}" />
+            <marker date="1511284949000" expanded="true" signature="12734:12836" ph="{&quot;repeat&quot;: 'no-repeat'...}" />
           </folding>
         </state>
       </provider>
@@ -665,16 +651,54 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="181">
           <caret line="164" column="8" lean-forward="false" selection-start-line="164" selection-start-column="8" selection-end-line="164" selection-end-column="8" />
-          <folding />
+          <folding>
+            <marker date="1511284949000" expanded="true" signature="6173:6275" ph="{...}" />
+          </folding>
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/index.html">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="406">
-          <caret line="88" column="14" lean-forward="false" selection-start-line="88" selection-start-column="14" selection-end-line="88" selection-end-column="14" />
+        <state relative-caret-position="366">
+          <caret line="86" column="75" lean-forward="true" selection-start-line="86" selection-start-column="75" selection-end-line="86" selection-end-column="75" />
           <folding>
             <element signature="n#style#0;n#div#1;n#div#2;n#div#0;n#body#0;n#html#0;n#!!top" expanded="true" />
+            <marker date="1511284949000" expanded="true" signature="5353:13885" ph="..." />
+            <marker date="1511284949000" expanded="true" signature="5372:5671" ph="{...}" />
+            <marker date="1511284949000" expanded="true" signature="5714:5731" ph="{...}" />
+            <marker date="1511284949000" expanded="true" signature="5872:5933" ph="{...}" />
+            <marker date="1511284949000" expanded="true" signature="6190:6530" ph="{...}" />
+            <marker date="1511284949000" expanded="true" signature="6603:8056" ph="{...}" />
+            <marker date="1511284949000" expanded="true" signature="6793:7987" ph="{...}" />
+            <marker date="1511284949000" expanded="true" signature="7244:7348" ph="{...}" />
+            <marker date="1511284949000" expanded="true" signature="7401:7505" ph="{...}" />
+            <marker date="1511284949000" expanded="true" signature="7554:7658" ph="{...}" />
+            <marker date="1511284949000" expanded="true" signature="7707:7811" ph="{...}" />
+            <marker date="1511284949000" expanded="true" signature="7861:7916" ph="{...}" />
+            <marker date="1511284949000" expanded="true" signature="7920:7978" ph="{...}" />
+            <marker date="1511284949000" expanded="true" signature="7991:8022" ph="{...}" />
+            <marker date="1511284949000" expanded="true" signature="8143:8177" ph="{...}" />
+            <marker date="1511284949000" expanded="true" signature="8239:8894" ph="{...}" />
+            <marker date="1511284949000" expanded="true" signature="8377:8500" ph="{...}" />
+            <marker date="1511284949000" expanded="true" signature="8504:8860" ph="{...}" />
+            <marker date="1511284949000" expanded="true" signature="8735:8846" ph="{...}" />
+            <marker date="1511284949000" expanded="true" signature="8940:9160" ph="{...}" />
+            <marker date="1511284949000" expanded="true" signature="9068:9149" ph="{...}" />
+            <marker date="1511284949000" expanded="true" signature="9186:9484" ph="{...}" />
+            <marker date="1511284949000" expanded="true" signature="9217:9472" ph="{...}" />
+            <marker date="1511284949000" expanded="true" signature="9352:9459" ph="{...}" />
+            <marker date="1511284949000" expanded="true" signature="9512:9562" ph="{...}" />
+            <marker date="1511284949000" expanded="true" signature="9667:9703" ph="{&quot;color&quot;: &quot;rgba(0,0,0,0)&quot;...}" />
+            <marker date="1511284949000" expanded="true" signature="9840:10957" ph="[...]" />
+            <marker date="1511284949000" expanded="true" signature="10995:11605" ph="{...}" />
+            <marker date="1511284949000" expanded="true" signature="11205:11581" ph="{...}" />
+            <marker date="1511284949000" expanded="true" signature="11436:11536" ph="{&quot;repeat&quot;: 'no-repeat'...}" />
+            <marker date="1511284949000" expanded="true" signature="11643:12255" ph="{...}" />
+            <marker date="1511284949000" expanded="true" signature="11853:12231" ph="{...}" />
+            <marker date="1511284949000" expanded="true" signature="12084:12186" ph="{&quot;repeat&quot;: 'no-repeat'...}" />
+            <marker date="1511284949000" expanded="true" signature="12293:12905" ph="{...}" />
+            <marker date="1511284949000" expanded="true" signature="12503:12881" ph="{...}" />
+            <marker date="1511284949000" expanded="true" signature="12734:12836" ph="{&quot;repeat&quot;: 'no-repeat'...}" />
           </folding>
         </state>
       </provider>

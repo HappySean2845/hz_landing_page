@@ -14,17 +14,30 @@
     background-size: 100% 100%;
     z-index: 17;
 }
-
-
-
+.arScene .clickMsg{
+    width: 4.75rem;
+    height: 0.31rem;
+    position: absolute;
+    margin-left: -2.36rem;
+    left:50%;
+    top: 30px;
+}
+.arScene .clickMsg img{
+    width:100%;
+}
 .mainBar{
     width:100%;
-    height:100%;
-    position: absolute;
-    background-image: url("../img/bar_bg_18.jpg");
+    height: 100%;
+    background-image: url("../img/main_index_bg_02.jpg");
     background-repeat:no-repeat;
-    background-size: 7.5rem 30.93rem;
+    background-size: 7.5rem 45.38rem;
     background-position:0rem 0rem;
+    position: absolute;
+
+}
+.mainBar.relation{
+    transition:all 1s ease 0s;
+    transition-property:background-position;
 }
 .mainBar .barItem{
     position: absolute;
@@ -72,7 +85,7 @@
 .mainBar .touchIcon{
     width: 0.64rem;
     height: 1.83rem;
-    background:url("../img/bar_icon_03.png");
+    background:url("../img/icon.png");
     background-size: 100% 100%;
     background-repeat:no-repeat;
     left: 50%;
@@ -80,12 +93,17 @@
     top: 0;
     position: absolute;
     z-index: 11;
+    display: none;
 }
+/*.mainBar .touchIcon.high{*/
+    /*background:url("../img/iconhigh.png");*/
+    /*background-size: 100% 100%;*/
+    /*background-repeat:no-repeat;*/
+/*}*/
 .mainBar .touchIcon.animate {
-    transition:all 1s ease 0s;
+    transition:transform 1s ease 0s;
 }
 .mainBar .touchIcon.reset{
-    /*transition:all 1s ease */
     top:0;
 }
 .mainBar .touchIcon{
@@ -96,24 +114,25 @@
     background-repeat:no-repeat;
     left: 50%;
     margin-left: -0.32rem;
-    top: 0;
+    top: 50%;
+    margin-top: -5.33rem;
     position: absolute;
     z-index: 11;
 }
-
-
-.mainBar  .touchLine{
-    width: 0.02rem;
-    height:90%;
-    background: #ffd682;
+.mainBar .touchLine{
+    width: 0.16rem;
+    height:7rem;
+    background: url("../img/arraw.png");
+    background-repeat: no-repeat;
+    background-size: 100% 100%;
     left: 50%;
-    margin-left:-0.01rem;
+    top:50%;
+    margin-top: -3.5rem;
+    margin-left:-0.08rem;
     position: absolute;
-    margin-top: 5%;
     z-index:10;
+    display: none;
 }
-
-
 .arScene .ar_item_1{
     width: 3.06rem;
     height: 3.16rem;
@@ -176,22 +195,29 @@
     position: absolute;
     width:100%;
     height:100%;
-    background-image: url("../img/index_bg_02.jpg");
     background-repeat: no-repeat;
     -webkit-background-size:100% 100%;
     background-size:100% 100%;
+    overflow: auto;
 }
 .mainIndex img{
     width:100%;
 }
 .mainIndex.animate .logo{
     opacity: 1;
+    margin-top:0;
 }
 .mainIndex.animate .img {
     opacity: 1;
+    margin-top:0;
 }
 .mainIndex.animate .introd {
     opacity: 1;
+    margin-top:0;
+}
+.mainIndex.animate .addMsg {
+    opacity: 1;
+    margin-top:0;
 }
 .mainIndex .logo{
     width: 2.76rem;
@@ -200,6 +226,8 @@
     top: 1.4rem;
     opacity: 0;
     transition:opacity 1.5s ease 0s;
+    transition-property:opacity,margin;
+    margin-top:-50px;
 }
 .mainIndex .img {
     width: 6.84rem;
@@ -208,6 +236,7 @@
     top: 1.56rem;
     opacity: 0;
     transition:opacity 1.5s ease 2s;
+    transition-property:opacity,margin;
 }
 .mainIndex .introd {
     width: 5.99rem;
@@ -216,7 +245,27 @@
     top: 4.35rem;
     opacity: 0;
     transition:opacity 1.5s ease 1s;
+    transition-property:opacity,margin;
+    margin-top:30px;
 }
+.mainIndex .addMsg{
+    width: 2.91rem;
+    height: 0.61rem;
+    position: absolute;
+    left:50%;
+    margin-left: -1.45rem;
+    top: 8.15rem;
+    transition:opacity 1.5s ease 3s;
+    margin-top:50px;
+    transition-property:opacity,margin;
+    opacity: 0;
+}
+.mainIndex .addMsg img{
+    width:100%;
+}
+
+
+
 .mainIndex .handpull{
     width:0.6rem;
     height: 0.4rem;

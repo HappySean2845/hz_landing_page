@@ -59,24 +59,29 @@
     </div>
 
     <div class="mainIndex hide">
-        <div class="logo"><img src="img/index_logo_03.png"></div>
-        <div class="img"><img src="img/index_img_03.png"></div>
-        <div class="introd"><img src="img/index_introd_03.png"></div>
-        <div class="handpull bounceDom"><img src="img/handpull.png" alt=""></div>
+        <div class="mainBar relation" id="mainBar">
+            <div class="barItem barItem-1"><img src="img/bar_item1_07.png" alt=""></div>
+            <div class="barItem barItem-2"><img src="img/bar_item2_11.png" alt=""></div>
+            <div class="barItem barItem-3"><img src="img/bar_item3_15.png" alt=""></div>
+            <div class="barItem barItem-4"><img src="img/bar_item4_19.png" alt=""></div>
+            <!--拖动图标-->
+            <div class="touchIcon" id="touchIcon"></div>
+            <div class="touchLine"></div>
+        </div>
+        <div class="logo mainIndexSource"><img src="img/index_logo_03.png"></div>
+        <div class="img mainIndexSource"><img src="img/index_img_03.png"></div>
+        <div class="introd mainIndexSource"><img src="img/index_introd_03.png"></div>
+        <div class="addMsg mainIndexSource"><img src="img/addMsg_03.png"></div>
+        <!--<div class="handpull bounceDom" style="display: none"><img src="img/handpull.png" alt=""></div>-->
     </div>
-    <div class="mainBar hide" id="mainBar">
-        <div class="barItem barItem-1"><img src="img/bar_item1_07.png" alt=""></div>
-        <div class="barItem barItem-2"><img src="img/bar_item2_11.png" alt=""></div>
-        <div class="barItem barItem-3"><img src="img/bar_item3_15.png" alt=""></div>
-        <div class="barItem barItem-4"><img src="img/bar_item4_19.png" alt=""></div>
-        <!--拖动图标-->
-        <div class="touchIcon" id="touchIcon"></div>
-        <div class="touchLine"></div>
-    </div>
+
     <div id="arScene" class="arScene hide" >
-    <div  class="ar_item_1" id="ar_item_1"></div>
-    <div  class="ar_item_2" id="ar_item_2"></div>
-    <div  class="ar_item_3" id="ar_item_3"></div>
+        <div class="clickMsg">
+            <img src="img/chickmsg_04.png" alt="">
+        </div>
+        <div  class="ar_item_1" id="ar_item_1"></div>
+        <div  class="ar_item_2" id="ar_item_2"></div>
+        <div  class="ar_item_3" id="ar_item_3"></div>
     </div>
     <div class="layer layer_1"></div>
     <div class="layer layer_2"></div>
@@ -104,16 +109,14 @@
     var touchObj = new Object();
     var touchIcon = document.getElementById("touchIcon");
     //获取最大可滑动距离
-    var maxCoundTouch = windowHeight - 0 - $(touchIcon)[0].clientHeight*1;
+    var maxCoundTouch = 7*window.fontSize +  $(touchIcon)[0].clientHeight*1;
     //开始拖动
     touchIcon.addEventListener("touchstart",function (event) {
       console.log("开始拖动",event);
-      maxCoundTouch = windowHeight - 0 - $(touchIcon)[0].clientHeight*1;
-      touchObj.bgTransHeight = parseInt(window.fontSize*30.93)-windowHeight;
-      touchObj.startY =
-//      alert(touchObj.bgTransHeight)
-//      console.log("开始拖动",event.targetTouches[0].pageY,'px')
+      maxCoundTouch = 7*window.fontSize +  $(touchIcon)[0].clientHeight*1;
+      touchObj.bgTransHeight = parseFloat(window.fontSize*(45.38-12.03))-windowHeight;
       touchObj.startY  = parseInt(event.targetTouches[0].pageY);
+      $(".mainBar").removeClass("relation");
       preventString(event);
     })
     //持续拖动
@@ -121,8 +124,10 @@
       touchObj.touchY  = parseInt(event.targetTouches[0].pageY) - touchObj.startY;
 //      console.log("拖动距离",touchObj.touchY);
       if(touchObj.touchY>=0&&touchObj.touchY<=maxCoundTouch){
-        $(touchIcon).css("top",touchObj.touchY + 'px');
-        $(".mainBar").css("background-position-y",-1*((touchObj.bgTransHeight/maxCoundTouch)*touchObj.touchY)+'px')
+//        $(touchIcon).css("top",touchObj.touchY + 'px');
+        $(touchIcon).css("transform","translateY("+touchObj.touchY+"px)")
+        console.log((-1*((touchObj.bgTransHeight/maxCoundTouch)*touchObj.touchY+12.03*window.fontSize)))
+        $(".mainBar").css("background-position-y",(-1*((touchObj.bgTransHeight/maxCoundTouch)*touchObj.touchY+12.03*window.fontSize))+'px')
         // 1 2 3 4 出现顺序
         if(1*touchObj.touchY>=maxCoundTouch*0.2){
           $(".barItem").removeClass("active");
@@ -140,6 +145,12 @@
           $(".barItem").removeClass("active");
           $(".barItem-4").addClass("active");
         }
+        if((maxCoundTouch - touchObj.touchY)<=10){
+          $(".touchIcon").addClass("high");
+        }else{
+          $(".touchIcon").removeClass("high");
+        }
+
       }else{
         return false;
       }
@@ -156,7 +167,8 @@
         $("#arScene").fadeIn(800);
       }else{
         console.log("重新拖动")
-        $("#touchIcon").addClass("animate").css("top",'0px');
+        $(touchIcon).css("transform","translateY("+0+"px)");
+        $("#mainBar").css("background-position",'0 -12.04rem');
         $(".barItem").removeClass("active");
         setTimeout(function () {
           $("#touchIcon").removeClass("animate");
@@ -172,17 +184,19 @@
       $('.mainIndex').fadeIn(800);
       setTimeout(function () {
         $(".mainIndex").addClass("animate");
-//        return drawNext();
+        return drawNext();
       },600)
     })
-    $(".mainIndex").drag(function(e){
-//      console.log("drag")
-      console.log(e);
-      if(e.dy<=-100){
-        $(".mainIndex").fadeOut(800);
-        $(".mainBar").fadeIn(800);
-      }
-    })
+    function drawNext() {
+      setTimeout(function () {
+        $(".mainIndexSource").hide();
+        $("#mainBar").css("background-position",'0 -12.04rem');
+        setTimeout(function () {
+          $("#mainBar .touchIcon").fadeIn(500);
+          $("#mainBar .touchLine").fadeIn(500);
+        },800)
+      },4500)
+    }
     setTimeout(function () {
       $("#container").addClass("animate");
     },500)
@@ -233,45 +247,6 @@
       }
       return _sp;
     }
-
-    // var scene = C3D.create({
-    //   type: 'sprite', position: [0, 0, -s.fov], children: [
-    //     {
-    //       type: 'plane',
-    //       el: document.getElementById('ar_item_1'),
-    //       name: 'p1',
-    //       size: [400],
-    //       position: [-400, 300, 0],
-    //       rotation: [0, 0, 0],
-    //     },
-    //     {
-    //       type: 'plane',
-    //       el: document.getElementById('ar_item_2'),
-    //       name: 'p2',
-    //       size: [400],
-    //       position: [120, 200, 0],
-    //       rotation: [0, 0, 0],
-    //     },
-    //     {
-    //       type: 'plane',
-    //       el: document.getElementById('ar_item_3'),
-    //       name: 'p3',
-    //       size: [040],
-    //       position: [900, 300, 0],
-    //       rotation: [0, 0, 0],
-    //     },
-    //   ]
-    // });
-
-    // scene.p1.on("click",function () {
-    //   console.log("p1")
-    // })
-    // scene.p2.on("click",function () {
-    //   console.log("p2")
-    // })
-    // scene.p3.on("click",function () {
-    //   console.log("p3")
-    // })
     var pano = createPano(bgData, panoRect);
     pano.position(0, -200, -400).updateT();
     // pano.addChild(scene);

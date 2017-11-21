@@ -132,43 +132,23 @@
     position: absolute;
     z-index:10;
     display: none;
-} .ar_item_1{
-    width: 3.06rem;
-    height: 3.16rem;
-    background: url("../img/ar_icon_1_03.png");
-    background-size: 100% 100%;
-    background-repeat: no-repeat;
-}
- .ar_item_2{
-    width: 3.06rem;
-    height: 3.16rem;
-    background: url("../img/ar_icon2_03.png");
-    background-size: 100% 100%;
-    background-repeat: no-repeat;
-}
- .ar_item_3{
-    width: 3.06rem;
-    height: 3.16rem;
-    background: url("../img/ar_icon_3_03.png");
-    background-size: 100% 100%;
-    background-repeat: no-repeat;
 }
 .ar_item_1{
-    width: 3.06rem;
-    height: 3.16rem;
-    background: url(../img/ar_icon_1_03.png);
+    width: 3.55rem;
+    height: 3.93rem;
+    background: url(../img/ar_icon_1_03.png?isd=1);
     background-size: 100% 100%;
     background-repeat: no-repeat;
     position: absolute;
     z-index: 20;
-    top: 1rem!important;
+    top: 1.1rem!important;
     left: 3.6rem!important;
     -webkit-animation:move_1 2s linear infinite;
 }
 .ar_item_2{
-    width: 3.06rem;
-    height: 3.16rem;
-    background: url(../img/ar_icon2_03.png);
+    width: 4.12rem;
+    height: 3.58rem;
+    background: url(../img/ar_icon2_03.png?osd=2);
     background-size: 100% 100%;
     background-repeat: no-repeat;
     position: absolute;
@@ -178,15 +158,15 @@
     -webkit-animation:move_2 2s linear infinite;
 }
 .ar_item_3{
-    width: 3.06rem;
-    height: 3.16rem;
-    background: url(../img/ar_icon_3_03.png);
+    width: 3.37rem;
+    height: 3.91rem;
+    background: url(../img/ar_icon_3_03.png?osd=2);
     background-size: 100% 100%;
     background-repeat: no-repeat;
     position: absolute;
     z-index: 20;
-    top: 6.5rem!important;
-    left: 3rem!important;
+    top: 6.6rem!important;
+    left: 3.5rem!important;
     -webkit-animation:move_3 2s linear infinite;
 }
 
@@ -310,7 +290,7 @@
     position:absolute;
 }
 .layer img:nth-of-type(1){
-    margin:3.4rem auto 0;
+    margin:3.09rem auto 0;
     display:block;
 }
 .layer img:nth-of-type(2){
@@ -325,7 +305,7 @@
 .layer_1 img:nth-of-type(2){
     width: 7.24rem;
     right: 0px !important;
-    top: 1rem !important;
+    top: 1.17rem !important;
 }
 .layer_2{
     background-image:url("../img/layer/bg_2.jpg");
@@ -336,7 +316,7 @@
 .layer_2 img:nth-of-type(2){
     width:7.21rem;
     right: 0 !important;
-    top: 1.22rem !important;
+    top: 1.14rem !important;
 }
 .layer_3{
     background-image:url("../img/layer/bg_3.jpg");
@@ -346,7 +326,7 @@
 }
 .layer_3 img:nth-of-type(2){
     width:6.09rem;
-    top: 1.67rem !important;
+    top: 1.57rem !important;
     right: -0.34rem !important;
 }
 

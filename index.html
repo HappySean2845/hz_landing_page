@@ -86,19 +86,19 @@
         <div  class="ar_item_2" id="ar_item_2"></div>
         <div  class="ar_item_3" id="ar_item_3"></div>
     </div>
-    <div class="layer layer_1">
+    <div class="layer layer_1" data-scalar-x='30.0' data-scalar-y='30.0'>
         <img data-depth="0.00" src="img/layer/txt_1.png">
         <img data-depth="0.20" src="img/layer/obj_1.png">
         <img class="logo" src="img/layer/logo1.png">
         <img class="light" src="img/layer/light.png">
         <img class="door" src="img/layer/door1.png">
         <div class="lights">
-          <img src="img/layer/light1.png" alt="">
-          <img src="img/layer/light1.png" alt="">
-          <img src="img/layer/light1.png" alt="">
+          <img src="img/layer/light1.png" alt="" style="left: 1.1rem;">
+          <img src="img/layer/light1.png" alt="" style="left: 3.2rem;">
+          <img src="img/layer/light1.png" alt="" style="left: 5.4rem;">
         </div>
     </div>
-    <div class="layer layer_2">
+    <div class="layer layer_2" data-scalar-x='30.0' data-scalar-y='30.0'>
         <img data-depth="0.00" src="img/layer/txt_2.png">
         <img data-depth="0.20" src="img/layer/obj_2.png">
         <img class="logo" src="img/layer/logo2.png">
@@ -111,7 +111,7 @@
           <img src="img/layer/light2.png" alt="">
         </div>
     </div>
-    <div class="layer layer_3">
+    <div class="layer layer_3" data-scalar-x='30.0' data-scalar-y='30.0'>
         <img data-depth="0.00" src="img/layer/txt_3.png">
         <img data-depth="0.20" src="img/layer/obj_3.png">
         <img class="logo" src="img/layer/logo3.png">
@@ -155,7 +155,7 @@
     $('.layer_3').fadeIn();
   })
   $('.layer').click(function(){
-    // window.location.href="http://m.huazhu.com/Hotel/Detail?hotelId=1000202";
+    window.location.href="http://m.huazhu.com/Hotel/Detail?hotelId=1000202";
   })
   function size() {
     var _screenWidth = document.documentElement.clientWidth < 300 ? 300 : document.documentElement.clientWidth,

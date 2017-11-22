@@ -367,12 +367,16 @@
 .layer *{
     position:absolute;
 }
-.layer img:nth-of-type(1){
+.layer>img:nth-of-type(1){
     margin:3.09rem auto 0;
     display:block;
 }
-.layer img:nth-of-type(2){
+.layer>img:nth-of-type(2){
     left: auto !important;
+}
+.layer .logo{
+    left: 0.3rem !important;
+    top: 0.5rem !important;
 }
 .layer .door{
     width: 94%;
@@ -380,24 +384,72 @@
     top: auto !important;
     left: 3% !important;
 }
+.layer .light{
+    width: 86%;
+    -webkit-animation:fade 2s ease infinite;
+    z-index:-1;
+}
+.layer .lights{
+    top: auto !important;
+    bottom: 5.7rem;
+}
+.layer .lights img{
+    width:0.2rem;
+}
 .layer_1{
     background-image:url("../img/layer/bg_1.jpg");
 }
-.layer_1 img:nth-of-type(1){
+.layer_1>img:nth-of-type(1){
     width:3.6rem;
 }
-.layer_1 img:nth-of-type(2){
+.layer_1>img:nth-of-type(2){
     width: 7.24rem;
     right: 0px !important;
     top: 1.17rem !important;
 }
+.layer_1 .lights>img:nth-of-type(1){
+    -webkit-animation:fade 1s ease infinite;
+}
+.layer_1 .lights>img:nth-of-type(2){
+    -webkit-animation:fade 1s ease 0.5s infinite;
+}
+.layer_1 .lights>img:nth-of-type(3){
+    -webkit-animation:fade 1s ease  1s infinite;
+}
+.layer_2 .lights>img:nth-of-type(1){
+    -webkit-animation:fade 1s ease infinite;
+    left: 0.85rem;
+}
+.layer_2 .lights>img:nth-of-type(2){
+    -webkit-animation:fade 1s ease 0.5s infinite;
+    left: 2.45rem;
+    margin-top: 0.1rem;
+}
+.layer_2 .lights>img:nth-of-type(3){
+    -webkit-animation:fade 1s ease  1s infinite;
+    left: 4.1rem;
+}
+.layer_2 .lights>img:nth-of-type(4){
+    -webkit-animation:fade 1s ease  1.5s infinite;
+    left: 5.7rem;
+    top: 0.1rem;
+}
+.layer_1 .logo{
+    width:2.76rem;
+}
+.layer_2 .logo{
+    width:2.2rem;
+}
+.layer_3.logo{
+    width:2.6rem;
+}
 .layer_2{
     background-image:url("../img/layer/bg_2.jpg");
 }
-.layer_2 img:nth-of-type(1){
+.layer_2>img:nth-of-type(1){
     width:4.76rem;
 }
-.layer_2 img:nth-of-type(2){
+.layer_2>img:nth-of-type(2){
     width:7.21rem;
     right: 0 !important;
     top: 1.14rem !important;
@@ -405,15 +457,18 @@
 .layer_3{
     background-image:url("../img/layer/bg_3.jpg");
 }
-.layer_3 img:nth-of-type(1){
+.layer_3>img:nth-of-type(1){
     width:4.09rem;
 }
-.layer_3 img:nth-of-type(2){
+.layer_3>img:nth-of-type(2){
     width:6.09rem;
     top: 1.57rem !important;
     right: -0.34rem !important;
 }
-
+@-webkit-keyframes fade{
+    from{opacity:0;}
+    to{opacity:1;}
+}
 @-webkit-keyframes move_1{
     0%{transform:translateY(0rem)}
     33%{transform:translateY(0.1rem)}

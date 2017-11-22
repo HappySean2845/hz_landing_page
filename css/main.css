@@ -36,6 +36,7 @@
     background-size: 7.5rem 45.38rem;
     background-position:0rem 0rem;
     position: absolute;
+    overflow: hidden;
 
 }
 .mainBar.relation{
@@ -284,13 +285,23 @@
     width:0.6rem;
     height: 0.4rem;
     position: absolute;
-    background: url("../img/handpull.png");
-    background-repeat:no-repeat;
-    background-size: 100% 100%;
-    bottom:0.8rem;
+    /*bottom:0.8rem;*/
+    top: 50%;
+    margin-top: -2.8rem;
     left:50%;
     margin-left: -0.3rem;
+    opacity:0.32;
+    transform: scale(0.76);
+    -webkit-transform: scale(0.76);
+    text-align: center;
+    display: none;
 }
+.mainIndex .handpull img{
+    transform: rotate(-180deg);
+    -webkit-transform: rotate(-180deg);
+    width: 72%;
+}
+
 .bounceDom {
     -webkit-animation:bounce 1s .2s ease both infinite;
     -moz-animation:bounce 1s .2s ease both infinite;
@@ -304,13 +315,13 @@
     -moz-animation:disappear 1s .2s ease both 1;
 }
 @-webkit-keyframes bounce{
-    0%{-webkit-transform:translateY(0)}
-    100%{-webkit-transform:translateY(-30px)}
+    0%{-webkit-transform:translateY(-30px)}
+    100%{-webkit-transform:translateY(0px)}
     /*60%{-webkit-transform:translateY(-15px)}*/
 }
 @-moz-keyframes bounce{
-    0%{-webkit-transform:translateY(0)}
-    100%{-webkit-transform:translateY(-30px)}
+    0%{-webkit-transform:translateY(-30px)}
+    100%{-webkit-transform:translateY(0px)}
 }
 @-webkit-keyframes appear{
     0%{

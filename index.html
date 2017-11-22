@@ -76,12 +76,16 @@
             <!--拖动图标-->
             <div class="touchIcon" id="touchIcon"></div>
             <div class="touchLine"></div>
+            <div class="handpull bounceDom"><img src="img/handpull.png" alt=""></div>
+
+
+
+
         </div>
         <div class="logo mainIndexSource"><img src="img/index_logo_03.png"></div>
         <div class="img mainIndexSource"><img src="img/index_img_03.png"></div>
         <div class="introd mainIndexSource"><img src="img/index_introd_03.png"></div>
         <div class="addMsg mainIndexSource"><img src="img/addMsg_03.png"></div>
-        <!--<div class="handpull bounceDom" style="display: none"><img src="img/handpull.png" alt=""></div>-->
     </div>
 
     <div id="arScene" class="arScene hide" >
@@ -193,6 +197,7 @@
       touchObj.bgTransHeight = parseFloat(window.fontSize*(45.38-12.03))-windowHeight;
       touchObj.startY  = parseInt(event.targetTouches[0].pageY);
       $(".mainBar").removeClass("relation");
+      $(".handpull").fadeOut(500);
       preventString(event);
     })
     //持续拖动
@@ -285,6 +290,7 @@
         console.log("重新拖动")
         $(touchIcon).css("transform","translateY("+0+"px)");
         $("#mainBar").css("background-position",'0 -12.04rem');
+        $(".handpull").fadeIn(500);
         $(".barItem").removeClass("active");
         setTimeout(function () {
           $("#touchIcon").removeClass("animate");
@@ -312,6 +318,7 @@
         setTimeout(function () {
           $("#mainBar .touchIcon").fadeIn(500);
           $("#mainBar .touchLine").fadeIn(500);
+          $(".handpull").fadeIn(500);
           $(".huazhu_logo").fadeIn(500);
         },800)
       },5500)

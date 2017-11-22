@@ -63,10 +63,10 @@
         <div class="mainBar relation" id="mainBar">
 
             <!--增加光线滑动效果-->
-            <div class="moveLine"></div>
-
-
-
+            <div class="moveLine" style="top: -3.7rem"></div>
+            <div class="moveLine delay_1" style="top: 6.22rem;"></div>
+            <div class="moveLine delay_2" style="top: 1.52rem;"></div>
+            <div class="moveLine" style="top: 9.8rem"></div>
 
 
             <div class="barItem barItem-1"><img src="img/bar_item1_07.png" alt=""></div>
@@ -269,6 +269,7 @@
     function drawNext() {
       setTimeout(function () {
         $(".mainIndexSource").hide();
+        $(".moveLine").fadeOut(200);
         $("#mainBar").css("background-position",'0 -12.04rem');
         setTimeout(function () {
           $("#mainBar .touchIcon").fadeIn(500);

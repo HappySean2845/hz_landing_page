@@ -233,6 +233,7 @@
     transition:opacity 1.5s ease 0s;
     transition-property:opacity,margin;
     margin-top:-50px;
+    z-index: 3;
 }
 .mainIndex .img {
     width: 6.84rem;
@@ -242,6 +243,8 @@
     opacity: 0;
     transition:opacity 1.5s ease 1s;
     transition-property:opacity,margin;
+    z-index: 3;
+
 }
 .mainIndex .introd {
     width: 5.99rem;
@@ -252,6 +255,8 @@
     transition:opacity 1.5s ease 2s;
     transition-property:opacity,margin;
     margin-top:30px;
+    z-index: 3;
+
 }
 .mainIndex .addMsg{
     width: 2.91rem;
@@ -264,6 +269,7 @@
     margin-top:50px;
     transition-property:opacity,margin;
     opacity: 0;
+    z-index: 3;
 }
 .mainIndex .addMsg img{
     width:100%;
@@ -432,4 +438,37 @@
 }
 .huazhu_logo img{
     width:100%;
+}
+.moveLine{
+    width:2.48rem;
+    height: 3.65rem;
+    background: url(../img/moveline_03.png) no-repeat;
+    background-size: 100% 100%;
+    position: absolute;
+    z-index: 1;
+    opacity: 1;
+    transform: scale(1.2);
+    right:0;
+    -webkit-animation: fly 3.2s 0s infinite ease normal none;
+}
+.moveLine.delay_1{
+    -webkit-animation: fly 2.6s 1s infinite ease normal none;
+}
+.moveLine.delay_2{
+    -webkit-animation: fly 3s 0.8s infinite ease normal none;
+}
+
+@-webkit-keyframes fly{
+    0%{
+        -webkit-transform:translateX(px) translateY(px);
+    } 100%{
+          -webkit-transform:translateX(-496px) translateY(730px);
+      }
+}
+@-moz-keyframes fly{
+    0%{
+        -moz-transform:translateX(px) translateY(px);
+    } 100%{
+          -moz-transform:translateX(-500px) translateY(260px);
+      }
 }

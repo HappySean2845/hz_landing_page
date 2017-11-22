@@ -61,6 +61,14 @@
 
     <div class="mainIndex hide">
         <div class="mainBar relation" id="mainBar">
+
+            <!--增加光线滑动效果-->
+            <div class="moveLine"></div>
+
+
+
+
+
             <div class="barItem barItem-1"><img src="img/bar_item1_07.png" alt=""></div>
             <div class="barItem barItem-2"><img src="img/bar_item2_11.png" alt=""></div>
             <div class="barItem barItem-3"><img src="img/bar_item3_15.png" alt=""></div>
@@ -359,7 +367,7 @@
     panoZ.position(0, -200, -380).updateT();
     s.addChild(pano);
     s.addChild(panoB);
-    s.addChild(panoZ)
+    s.addChild(panoZ);
     //刷新场景
     requestAnimationFrame = window.requestAnimationFrame || window.mozRequestAnimationFrame || window.webkitRequestAnimationFrame || window.msRequestAnimationFrame || window.oRequestAnimationFrame ||
       function (callback) {
@@ -367,9 +375,8 @@
       };
     function go() {
       pano.rotate(0, 0.1, 0).updateT();
-      panoB.rotate(0, 0.12, 0).updateT();
-      panoZ.rotate(0, 0.13, 0).updateT();
-
+      panoB.rotate(0, 0.2, 0).updateT();
+      panoZ.rotate(0, 0.36, 0).updateT();
 //      requestAnimationFrame(go);
 //      scene.rotate(0, 1, 0).updateT();
 //      scene.p3.rotate(-1, 0, 0).updateT();

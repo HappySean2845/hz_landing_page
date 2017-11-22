@@ -80,34 +80,25 @@
         <div class="clickMsg">
             <img src="img/chickmsg_04.png" alt="">
         </div>
-<<<<<<< HEAD
+
+
         <div class="pScene" id="pScene" class="" data-limit-y="0" data-scalar-x="60" style="position: absolute;width: 100%;height: 100%;">
             <div  class="ar_item_1" id="ar_item_1" data-depth="0.20"></div>
             <div  class="ar_item_2" id="ar_item_2" data-depth="0.25"></div>
             <div  class="ar_item_3" id="ar_item_3" data-depth="0.30"></div>
-=======
-
-
-        <div class="pScene" id="pScene" class="" style="position: absolute;width: 100%;height: 100%;">
-        </div>
-        <div class="par">
-          <div data-depth="0.20" class="ar_item_1" id="ar_item_1"></div>
-          <div data-depth="0.25" class="ar_item_2" id="ar_item_2"></div>
-          <div data-depth="0.30" class="ar_item_3" id="ar_item_3"></div>
->>>>>>> c1877f265823902cde646913597e869790652001
         </div>
     </div>
     <div class="layer layer_1">
-      <img data-depth="0.00" src="img/layer/txt_1.png">
-      <img data-depth="0.20" src="img/layer/obj_1.png">
+        <img data-depth="0.00" src="img/layer/txt_1.png">
+        <img data-depth="0.20" src="img/layer/obj_1.png">
     </div>
     <div class="layer layer_2">
-      <img data-depth="0.00" src="img/layer/txt_2.png">
-      <img data-depth="0.20" src="img/layer/obj_2.png">
+        <img data-depth="0.00" src="img/layer/txt_2.png">
+        <img data-depth="0.20" src="img/layer/obj_2.png">
     </div>
     <div class="layer layer_3">
-      <img data-depth="0.00" src="img/layer/txt_3.png">
-      <img data-depth="0.20" src="img/layer/obj_3.png">
+        <img data-depth="0.00" src="img/layer/txt_3.png">
+        <img data-depth="0.20" src="img/layer/obj_3.png">
     </div>
 </div>
 <script type="text/javascript" src="js/main.js"></script>
@@ -125,27 +116,11 @@
   var parallax = new Parallax(scene_3, {
     pointerEvents: true,
   });
-  var scene = $('.par').get(0)
-  var parallax = new Parallax(scene,{
-    pointerEvents: true,
-  });
-  $('#ar_item_1').click(function(){
-    $('.layer_1').fadeIn();
-  })
-  $('#ar_item_2').click(function(){
-    $('.layer_2').fadeIn();
-  })
-  $('#ar_item_3').click(function(){
-    $('.layer_3').fadeIn();
-  })
-  $('.layer').click(function(){
-    window.location.href="http://m.huazhu.com/Hotel/Detail?hotelId=1000202";
-  })
   function size() {
     var _screenWidth = document.documentElement.clientWidth < 300 ? 300 : document.documentElement.clientWidth,
       _UIWidth = 750,
       _fontSize = _screenWidth / _UIWidth * 100;
-      window.fontSize = parseFloat(_fontSize);
+    window.fontSize = parseFloat(_fontSize);
     document.documentElement.style.fontSize = _fontSize + 'px';
   }
   size();
@@ -182,20 +157,20 @@
         $(".mainBar").css("background-position-y",(-1*((touchObj.bgTransHeight/maxCoundTouch)*touchObj.touchY+12.03*window.fontSize))+'px')
         // 1 2 3 4 出现顺序
         if(1*touchObj.touchY>=maxCoundTouch*0.2){
-          $(".barItem").removeClass("active").addClass('up');
-          $(".barItem-1").removeClass("up").addClass("active");
+          $(".barItem").removeClass("active");
+          $(".barItem-1").addClass("active");
         }
         if((1*touchObj.touchY)>=(maxCoundTouch*0.4)){
-          $(".barItem").removeClass("active").addClass('up');
-          $(".barItem-2").removeClass("up").addClass("active");
+          $(".barItem").removeClass("active");
+          $(".barItem-2").addClass("active");
         }
         if(1*touchObj.touchY>=maxCoundTouch*0.6){
-          $(".barItem").removeClass("active").addClass('up');
-          $(".barItem-3").removeClass("up").addClass("active");
+          $(".barItem").removeClass("active");
+          $(".barItem-3").addClass("active");
         }
         if(1*touchObj.touchY>=maxCoundTouch*0.8){
-          $(".barItem").removeClass("active").addClass('up');
-          $(".barItem-4").removeClass("up").addClass("active");
+          $(".barItem").removeClass("active");
+          $(".barItem-4").addClass("active");
         }
         if((maxCoundTouch - touchObj.touchY)<=10){
           $(".touchIcon").addClass("high");
@@ -209,6 +184,10 @@
       preventString(event);
     })
     //持续拖动
+    var scene = $('#pScene').get(0)
+    var parallax = new Parallax(scene,{
+      pointerEvents: true,
+    });
     touchIcon.addEventListener("touchend",function (event) {
       console.log("拖动距离", touchObj.touchY,'最大可拖动距离',maxCoundTouch);
       //设置最大偏移误差为10px

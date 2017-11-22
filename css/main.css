@@ -144,7 +144,6 @@
     position: absolute;
     z-index:10;
     display: none;
-<<<<<<< HEAD
 } .ar_item_1{
     width: 3.06rem;
     height: 3.16rem;
@@ -165,17 +164,11 @@
     background: url("../img/ar_icon_3_03.png");
     background-size: 100% 100%;
     background-repeat: no-repeat;
-=======
->>>>>>> 85e0287ea6c4f4e2774435f67e70eb084a38d4ea
 }
 .ar_item_1{
     width: 3.55rem;
     height: 3.93rem;
-<<<<<<< HEAD
-    background: url(../img/ar_icon_1_03.png);
-=======
     background: url(../img/ar_icon_1_03.png?isd=1);
->>>>>>> 85e0287ea6c4f4e2774435f67e70eb084a38d4ea
     background-size: 100% 100%;
     background-repeat: no-repeat;
     position: absolute;

@@ -278,9 +278,6 @@
 .mainIndex .addMsg img{
     width:100%;
 }
-
-
-
 .mainIndex .handpull{
     width:0.6rem;
     height: 0.4rem;
@@ -491,4 +488,31 @@
     } 100%{
           -moz-transform:translateX(-500px) translateY(260px);
       }
+}
+.lightpoint{
+    width: 4.79rem;
+    height: 4.30rem;
+    background:url("../img/lightpoint.png");
+    /*-webkit-background-size:;*/
+    background-size:100% 100%;
+    background-repeat:no-repeat;
+    -webkit-animation: light 1s 0s infinite ease normal none;
+}
+
+@-webkit-keyframes light{
+    0%{  opacity: 0;  }
+    50%{ opacity: 1;  }
+    100%{  opacity: 0;  }
+}
+@-moz-keyframes light{
+    0%{
+        opacity: 0;
+
+    } 50%{
+          opacity: 1;
+      }
+100%{
+    opacity: 0;
+
+}
 }

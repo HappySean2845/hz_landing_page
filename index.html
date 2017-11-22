@@ -161,20 +161,55 @@
         $(".mainBar").css("background-position-y",(-1*((touchObj.bgTransHeight/maxCoundTouch)*touchObj.touchY+12.03*window.fontSize))+'px')
         // 1 2 3 4 出现顺序
         if(1*touchObj.touchY>=maxCoundTouch*0.2){
-          $(".barItem").removeClass("active");
-          $(".barItem-1").addClass("active");
+          if($(".barItem-2").hasClass("appear")){
+            $(".barItem-2").removeClass("appear").addClass("disappear");
+          }
+          if($(".barItem-3").hasClass("appear")){
+            $(".barItem-3").removeClass("appear").addClass("disappear");
+          }
+          if($(".barItem-4").hasClass("appear")){
+            $(".barItem-4").removeClass("appear").addClass("disappear");
+          }
+          $(".barItem-1").removeClass("disappear").addClass("appear");     //出现
         }
         if((1*touchObj.touchY)>=(maxCoundTouch*0.4)){
-          $(".barItem").removeClass("active");
-          $(".barItem-2").addClass("active");
+//          $(".barItem").removeClass("active");    //消失
+          if($(".barItem-1").hasClass("appear")){
+            $(".barItem-1").removeClass("appear").addClass("disappear");
+          }
+          if($(".barItem-2").hasClass("appear")){
+            $(".barItem-2").removeClass("appear").addClass("disappear");
+          }
+          if($(".barItem-3").hasClass("appear")){
+            $(".barItem-3").removeClass("appear").addClass("disappear");
+          }
+          $(".barItem-2").removeClass("disappear").addClass("appear");     //出现
         }
         if(1*touchObj.touchY>=maxCoundTouch*0.6){
-          $(".barItem").removeClass("active");
-          $(".barItem-3").addClass("active");
+//          $(".barItem").removeClass("active");    //消失
+          if($(".barItem-1").hasClass("appear")){
+            $(".barItem-1").removeClass("appear").addClass("disappear");
+          }
+          if($(".barItem-2").hasClass("appear")){
+            $(".barItem-2").removeClass("appear").addClass("disappear");
+          }
+          if($(".barItem-4").hasClass("appear")){
+            $(".barItem-4").removeClass("appear").addClass("disappear");
+          }
+          $(".barItem-3").removeClass("disappear").addClass("appear");     //出现
         }
         if(1*touchObj.touchY>=maxCoundTouch*0.8){
-          $(".barItem").removeClass("active");
-          $(".barItem-4").addClass("active");
+//          $(".barItem").removeClass("active");    //消失
+          if($(".barItem-1").hasClass("appear")){
+            $(".barItem-1").removeClass("appear").addClass("disappear");
+          }
+          if($(".barItem-2").hasClass("appear")){
+            $(".barItem-2").removeClass("appear").addClass("disappear");
+          }
+          if($(".barItem-3").hasClass("appear")){
+            $(".barItem-3").removeClass("appear").addClass("disappear");
+          }
+          $(".barItem-4").removeClass("disappear").addClass("appear");     //出现
         }
         if((maxCoundTouch - touchObj.touchY)<=10){
           $(".touchIcon").addClass("high");

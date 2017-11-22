@@ -80,25 +80,50 @@
         <div class="clickMsg">
             <img src="img/chickmsg_04.png" alt="">
         </div>
-
-
-        <div class="pScene" id="pScene" class="" data-limit-y="0" data-scalar-x="60" style="position: absolute;width: 100%;height: 100%;">
-            <div  class="ar_item_1" id="ar_item_1" data-depth="0.20"></div>
-            <div  class="ar_item_2" id="ar_item_2" data-depth="0.25"></div>
-            <div  class="ar_item_3" id="ar_item_3" data-depth="0.30"></div>
-        </div>
+    </div>
+    <div class="pScene" id="pScene" class="" data-limit-y="0" data-scalar-x="60" style="position: absolute;width: 100%;height: 100%;">
+        <div  class="ar_item_1" id="ar_item_1"></div>
+        <div  class="ar_item_2" id="ar_item_2"></div>
+        <div  class="ar_item_3" id="ar_item_3"></div>
     </div>
     <div class="layer layer_1">
         <img data-depth="0.00" src="img/layer/txt_1.png">
         <img data-depth="0.20" src="img/layer/obj_1.png">
+        <img class="logo" src="img/layer/logo1.png">
+        <img class="light" src="img/layer/light.png">
+        <img class="door" src="img/layer/door1.png">
+        <div class="lights">
+          <img src="img/layer/light1.png" alt="">
+          <img src="img/layer/light1.png" alt="">
+          <img src="img/layer/light1.png" alt="">
+        </div>
     </div>
     <div class="layer layer_2">
         <img data-depth="0.00" src="img/layer/txt_2.png">
         <img data-depth="0.20" src="img/layer/obj_2.png">
+        <img class="logo" src="img/layer/logo2.png">
+        <img class="light" src="img/layer/light.png">
+        <img class="door" src="img/layer/door2.png">
+        <div class="lights">
+          <img src="img/layer/light2.png" alt="">
+          <img src="img/layer/light2.png" alt="">
+          <img src="img/layer/light2.png" alt="">
+          <img src="img/layer/light2.png" alt="">
+        </div>
     </div>
     <div class="layer layer_3">
         <img data-depth="0.00" src="img/layer/txt_3.png">
         <img data-depth="0.20" src="img/layer/obj_3.png">
+        <img class="logo" src="img/layer/logo3.png">
+        <img class="light" src="img/layer/light.png">
+        <img class="door" src="img/layer/door3.png">
+        <div class="lights">
+          <img src="img/layer/light3.png" alt="">
+          <img src="img/layer/light3.png" alt="">
+          <img src="img/layer/light3.png" alt="">
+          <img src="img/layer/light3.png" alt="">
+          <img src="img/layer/light3.png" alt="">
+        </div>
     </div>
     <div class="music_play"><img src="img/music_play_03.png"></div>
     <div class="huazhu_logo">
@@ -120,6 +145,18 @@
   var parallax = new Parallax(scene_3, {
     pointerEvents: true,
   });
+  $('#ar_item_1').click(function(){
+    $('.layer_1').fadeIn();
+  })
+  $('#ar_item_2').click(function(){
+    $('.layer_2').fadeIn();
+  })
+  $('#ar_item_3').click(function(){
+    $('.layer_3').fadeIn();
+  })
+  $('.layer').click(function(){
+    // window.location.href="http://m.huazhu.com/Hotel/Detail?hotelId=1000202";
+  })
   function size() {
     var _screenWidth = document.documentElement.clientWidth < 300 ? 300 : document.documentElement.clientWidth,
       _UIWidth = 750,
@@ -223,10 +260,10 @@
       preventString(event);
     })
     //持续拖动
-    var scene = $('#pScene').get(0)
-    var parallax = new Parallax(scene,{
-      pointerEvents: true,
-    });
+    // var scene = $('#pScene').get(0)
+    // var parallax = new Parallax(scene,{
+    //   pointerEvents: true,
+    // });
     touchIcon.addEventListener("touchend",function (event) {
       console.log("拖动距离", touchObj.touchY,'最大可拖动距离',maxCoundTouch);
       //设置最大偏移误差为10px
@@ -235,6 +272,7 @@
 //        $()
         $("#mainBar").fadeOut(800);
         $("#arScene").fadeIn(800);
+        $("#pScene").show();
       }else{
         console.log("重新拖动")
         $(touchIcon).css("transform","translateY("+0+"px)");

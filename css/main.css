@@ -107,11 +107,6 @@
     z-index: 11;
     display: none;
 }
-/*.mainBar .touchIcon.high{*/
-    /*background:url("../img/iconhigh.png");*/
-    /*background-size: 100% 100%;*/
-    /*background-repeat:no-repeat;*/
-/*}*/
 .mainBar .touchIcon.animate {
     transition:transform 1s ease 0s;
 }
@@ -246,7 +241,7 @@
     left: 0.59rem;
     top: 1.56rem;
     opacity: 0;
-    transition:opacity 1.5s ease 3s;
+    transition:opacity 1.5s ease 1s;
     transition-property:opacity,margin;
 }
 .mainIndex .introd {
@@ -255,7 +250,7 @@
     left:0.78rem;
     top: 4.35rem;
     opacity: 0;
-    transition:opacity 1.5s ease 1s;
+    transition:opacity 1.5s ease 2s;
     transition-property:opacity,margin;
     margin-top:30px;
 }
@@ -266,7 +261,7 @@
     left:50%;
     margin-left: -1.45rem;
     top: 8.15rem;
-    transition:opacity 1.5s ease 2s;
+    transition:opacity 1.5s ease 4s;
     margin-top:50px;
     transition-property:opacity,margin;
     opacity: 0;
@@ -380,4 +375,14 @@
     20%{transform:translateY(-0.1rem)}
     80%{transform:translateY(0.1rem)}
     100%{transform:translateY(0rem)}
+}
+.huazhu_logo{
+    position: absolute;
+    top:0.4rem;
+    left: 0.28rem;
+    width: 3.2rem;
+    display: none;
+}
+.huazhu_logo img{
+    width:100%;
 }

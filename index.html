@@ -100,16 +100,10 @@
         <img data-depth="0.00" src="img/layer/txt_3.png">
         <img data-depth="0.20" src="img/layer/obj_3.png">
     </div>
-
-
-
-
     <div class="music_play"><img src="img/music_play_03.png"></div>
     <div class="huazhu_logo">
-        <img src="img/index_logo_03.png"> alt="">
+        <img src="img/index_logo_03.png">
     </div>
-
-
 </div>
 <script type="text/javascript" src="js/main.js"></script>
 <script type="text/javascript" src="js/parallax.js"></script>
@@ -223,10 +217,11 @@
       console.log("click");
       $('.firstAd').fadeOut(800);
       $('.mainIndex').fadeIn(800);
+      $(".music_play").fadeIn(800);
       setTimeout(function () {
         $(".mainIndex").addClass("animate");
         return drawNext();
-      },600)
+      },800)
     })
     function drawNext() {
       setTimeout(function () {
@@ -235,8 +230,9 @@
         setTimeout(function () {
           $("#mainBar .touchIcon").fadeIn(500);
           $("#mainBar .touchLine").fadeIn(500);
+          $(".huazhu_logo").fadeIn(500);
         },800)
-      },4500)
+      },5500)
     }
     setTimeout(function () {
       $("#container").addClass("animate");

@@ -47,6 +47,7 @@ body{
     -webkit-backface-visibility: visible;
     -webkit-transform-origin: center center;
     -webkit-animation: musicanimate 2s 0s infinite linear normal backwards;
+    display:none;
 }
 .music_play img{
     width:100%;

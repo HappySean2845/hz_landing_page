@@ -41,13 +41,17 @@ body{
     width: 0.7rem;
     height: 0.7rem;
     overflow: hidden;
+
+    display:none;
+    z-index: 99;
+}
+.music_play.xz{
     -moz-backface-visibility: visible;
     -moz-transform-origin: center center;
     -moz-animation: musicanimate 2s 0s infinite linear normal backwards;
     -webkit-backface-visibility: visible;
     -webkit-transform-origin: center center;
     -webkit-animation: musicanimate 2s 0s infinite linear normal backwards;
-    display:none;
 }
 .music_play img{
     width:100%;

@@ -29,6 +29,9 @@
 </head>
 <body>
 <div class="container" id="container">
+    <audio loop="true" sytle="display:none" id="BGM">
+        <source src="audio/bgm.wav" type="audio/mpeg"></source>
+    </audio>
     <div class="firstAd" style="">
         <!---->
         <div class="steps">
@@ -67,6 +70,10 @@
             <div class="moveLine delay_1" style="top: 6.22rem;"></div>
             <div class="moveLine delay_2" style="top: 1.52rem;"></div>
             <div class="moveLine" style="top: 9.8rem"></div>
+            <div class="moveLine" style="top: 3.3rem;-webkit-animation: fly 3.2s 1.4s infinite ease normal none;"></div>
+            <div class="moveLine" style="top: -4.8rem;-webkit-animation: fly 3.7s 0s infinite ease normal none;"></div>
+            <div class="moveLine" style="top: 5.4rem;-webkit-animation: fly 3s 2s infinite ease normal none;"></div>
+
 
 
             <div class="barItem barItem-1"><img src="img/bar_item1_07.png" alt=""></div>
@@ -94,10 +101,10 @@
             <div class="lightpoint"></div>
         </div>
         <div  class="ar_item_2" id="ar_item_2">
-            <div class="lightpoint" style="margin-left: -0.4rem;margin-top: -0.7rem;"></div>
+            <div class="lightpoint" style="margin-left: -0.4rem;margin-top: -0.7rem;-webkit-animation: light 1.2s 0.6s infinite ease normal none;"></div>
         </div>
         <div  class="ar_item_3" id="ar_item_3">
-            <div class="lightpoint" style="margin-left: -0.6rem;margin-top: 0.3rem;"></div>
+            <div class="lightpoint" style="margin-left: -0.6rem;margin-top: 0.3rem;-webkit-animation: light 1.5s 0s infinite ease normal none;"></div>
         </div>
     </div>
     <div class="layer layer_1" data-scalar-x='30.0' data-scalar-y='30.0'>
@@ -184,6 +191,7 @@
   }
   $(function () {
     var windowHeight = $(window).height();
+    var bgm = document.getElementById("BGM");
     $("#container").css("height", windowHeight);
     function preventString(e) {
       return e.preventDefault()&&e.stopPropagation();
@@ -194,6 +202,7 @@
     var maxCoundTouch = 7*window.fontSize +  $(touchIcon)[0].clientHeight*1;
     //开始拖动
     touchIcon.addEventListener("touchstart",function (event) {
+      $(touchIcon).removeClass("animate")
       console.log("开始拖动",event);
       maxCoundTouch = 7*window.fontSize +  $(touchIcon)[0].clientHeight*1;
       touchObj.bgTransHeight = parseFloat(window.fontSize*(45.38-12.03))-windowHeight;
@@ -290,10 +299,15 @@
         $("#pScene").show();
       }else{
         console.log("重新拖动")
-        $(touchIcon).css("transform","translateY("+0+"px)");
+        $(touchIcon).addClass("animate").css("transform","translateY("+0+"px)");
         $("#mainBar").css("background-position",'0 -12.04rem');
         $(".handpull").fadeIn(500);
         $(".barItem").removeClass("active");
+        $(".barItem").each(function () {
+          if($(this).hasClass("appear")){
+            $(this).removeClass("appear").addClass("disappear");
+          }
+        })
         setTimeout(function () {
           $("#touchIcon").removeClass("animate");
 //          $("#touchIcon").removeClass("reset");
@@ -301,9 +315,22 @@
       }
       preventString(event);
     })
-
+    $(".music_play").on("click",function () {
+      if(window.musicStart){
+        bgm.pause();
+        $(".music_play").removeClass("xz");
+        window.musicStart = false;
+      }else{
+        bgm.play();
+        $(".music_play").addClass("xz");
+        window.musicStart = true;
+      }
+    })
     $(".music_btn").on("click",function () {
       console.log("click");
+      $(".music_play").addClass("xz");
+      bgm.play();
+      window.musicStart = true;
       $('.firstAd').fadeOut(800);
       $('.mainIndex').fadeIn(800);
       $(".music_play").fadeIn(800);
@@ -325,7 +352,7 @@
           $(".handpull").fadeIn(500);
           $(".huazhu_logo").fadeIn(500);
         },1300)
-      },5500)
+      },6800)
     }
     setTimeout(function () {
       $("#container").addClass("animate");

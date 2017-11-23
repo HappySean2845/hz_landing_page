@@ -506,7 +506,7 @@
     top: 0.46rem;
     left: 0.38rem;
     width: 2.6rem;
-    z-index: 99;
+    z-index: 19;
     display: none;
 }
 .huazhu_logo img{
@@ -556,19 +556,12 @@
 }
 
 @-webkit-keyframes light{
-    0%{  opacity: 0;  }
-    50%{ opacity: 1;  }
-    100%{  opacity: 0;  }
+    0%{opacity: 0;  transform:rotate(0deg);  }
+    50%{opacity: 1; transform:rotate(180deg);}
+    100%{opacity: 0;transform:rotate(360deg);}
 }
 @-moz-keyframes light{
-    0%{
-        opacity: 0;
-
-    } 50%{
-          opacity: 1;
-      }
-100%{
-    opacity: 0;
-
-}
+    0%{opacity: 0;  transform:rotate(0deg);  }
+    50%{opacity: 1; transform:rotate(180deg);}
+    100%{opacity: 0;transform:rotate(360deg);}
 }

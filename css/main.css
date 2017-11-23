@@ -503,9 +503,9 @@
 }
 .huazhu_logo{
     position: absolute;
-    top:0.4rem;
-    left: 0.28rem;
-    width: 3.2rem;
+    top: 0.46rem;
+    left: 0.38rem;
+    width: 2.6rem;
     display: none;
 }
 .huazhu_logo img{
@@ -521,13 +521,13 @@
     opacity: 1;
     transform: scale(1.2);
     right:0;
-    -webkit-animation: fly 3.2s 0s infinite ease normal none;
+    -webkit-animation: fly 3.7s 0s infinite ease normal none;
 }
 .moveLine.delay_1{
-    -webkit-animation: fly 2.6s 1s infinite ease normal none;
+    -webkit-animation: fly 3.1s 1s infinite ease normal none;
 }
 .moveLine.delay_2{
-    -webkit-animation: fly 3s 0.8s infinite ease normal none;
+    -webkit-animation: fly 3.5s 0.8s infinite ease normal none;
 }
 
 @-webkit-keyframes fly{

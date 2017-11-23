@@ -314,15 +314,17 @@
     })
     function drawNext() {
       setTimeout(function () {
-        $(".mainIndexSource").hide();
+        $(".mainIndexSource").css("transition","opacity 1s ease 0s").css("opacity",'0');
         $(".moveLine").fadeOut(200);
-        $("#mainBar").css("background-position",'0 -12.04rem');
+        setTimeout(function(){
+          $("#mainBar").css("background-position",'0 -12.04rem');
+        },800);
         setTimeout(function () {
           $("#mainBar .touchIcon").fadeIn(500);
           $("#mainBar .touchLine").fadeIn(500);
           $(".handpull").fadeIn(500);
           $(".huazhu_logo").fadeIn(500);
-        },800)
+        },1300)
       },5500)
     }
     setTimeout(function () {

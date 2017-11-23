@@ -146,7 +146,7 @@ body{
 .steps .step_2 img.wordText{
     width:3.23rem;
     left: 1.4rem;
-    top: 0.09rem;
+    top: 0.14rem;
     transition:all 1.5s ease 3s;
     transition-property:opacity,margin;
 

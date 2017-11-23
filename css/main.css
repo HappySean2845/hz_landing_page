@@ -374,7 +374,7 @@
     display: none;
     background-repeat:no-repeat;
     background-size: 100% auto;
-    background-position:0 -0.25rem;
+    background-position:0 -0.7rem;
     overflow:hidden;
     z-index:22;
 }
@@ -394,7 +394,7 @@
 }
 .layer .door{
     width: 94%;
-    bottom: 3rem;
+    bottom: 2rem;
     top: auto !important;
     left: 3% !important;
 }
@@ -405,7 +405,7 @@
 }
 .layer .lights{
     top: auto !important;
-    bottom: 5.7rem;
+    bottom: 4.7rem;
 }
 .layer .lights img{
     width:0.2rem;

@@ -9,7 +9,7 @@
     width:100%;
     height:100%;
     position: absolute;
-    background-image: url("../img/ar_bg_06.jpg");
+    background-image: url("../img/cd.gif");
     background-repeat:no-repeat;
     background-size: 100% 100%;
     z-index: 17;
@@ -20,7 +20,7 @@
     position: absolute;
     margin-left: -2.36rem;
     left:50%;
-    top: 30px;
+    bottom: 0.3rem;
 }
 .arScene .clickMsg img{
     width:100%;
@@ -503,9 +503,10 @@
 }
 .huazhu_logo{
     position: absolute;
-    top:0.4rem;
-    left: 0.28rem;
-    width: 3.2rem;
+    top: 0.46rem;
+    left: 0.38rem;
+    width: 2.6rem;
+    z-index: 99;
     display: none;
 }
 .huazhu_logo img{
@@ -521,13 +522,13 @@
     opacity: 1;
     transform: scale(1.2);
     right:0;
-    -webkit-animation: fly 3.2s 0s infinite ease normal none;
+    -webkit-animation: fly 3.7s 0s infinite ease normal none;
 }
 .moveLine.delay_1{
-    -webkit-animation: fly 2.6s 1s infinite ease normal none;
+    -webkit-animation: fly 3.1s 1s infinite ease normal none;
 }
 .moveLine.delay_2{
-    -webkit-animation: fly 3s 0.8s infinite ease normal none;
+    -webkit-animation: fly 3.5s 0.8s infinite ease normal none;
 }
 
 @-webkit-keyframes fly{

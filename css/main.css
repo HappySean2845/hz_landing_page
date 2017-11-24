@@ -27,6 +27,7 @@
 }
 .pScene{
     display:none;
+    overflow:hidden;
 }
 .mainBar{
     width:100%;
@@ -374,7 +375,7 @@
     display: none;
     background-repeat:no-repeat;
     background-size: 100% auto;
-    background-position:0 -0.7rem;
+    background-position:0 -0.9rem;
     overflow:hidden;
     z-index:22;
 }
@@ -382,7 +383,7 @@
     position:absolute;
 }
 .layer>img:nth-of-type(1){
-    margin:3.09rem auto 0;
+    margin:2.89rem auto 0;
     display:block;
 }
 .layer>img:nth-of-type(2){
@@ -394,13 +395,13 @@
 }
 .layer .door{
     width: 94%;
-    bottom: 2rem;
+    bottom: 2.2rem;
     top: auto !important;
     left: 3% !important;
 }
 .layer .light{
     width: 86%;
-    -webkit-animation:fade 2s ease infinite;
+    /*-webkit-animation:fade 2s ease infinite;*/
     z-index:-1;
 }
 .layer .lights{
@@ -409,6 +410,21 @@
 }
 .layer .lights img{
     width:0.2rem;
+}
+.layer .txt{
+    width: 100%;
+    text-align: center;
+    text-decoration: underline;
+    color: #fff;
+    font-size: 0.3rem;
+    bottom: .2rem;
+    top: auto !important;
+}
+.layer .btn{
+    width: 100%;
+    height: 1rem;
+    bottom: 1.2rem;
+    top:auto !important;
 }
 .layer_1{
     background-image:url("../img/layer/bg_1.jpg");
@@ -454,7 +470,7 @@
 .layer_2 .logo{
     width:2.2rem;
 }
-.layer_3.logo{
+.layer_3 .logo{
     width:2.6rem;
 }
 .layer_2{
@@ -503,8 +519,8 @@
 }
 .huazhu_logo{
     position: absolute;
-    top: 0.46rem;
-    left: 0.38rem;
+    top: 0.3rem;
+    left: 0.3rem;
     width: 2.6rem;
     z-index: 19;
     display: none;

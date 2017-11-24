@@ -19,7 +19,7 @@
     <title>听见不同 想住就住</title>
     <link rel="stylesheet" href="css/clean.css">
     <link rel="stylesheet" href="css/music.css">
-    <link rel="stylesheet" href="css/main.css">
+    <link rel="stylesheet" href="css/main.css?kk=222">
     <script type="text/javascript" src="bower_components/jquery2/jquery.min.js"></script>
     <script src="http://res.wx.qq.com/open/js/jweixin-1.0.0.js"></script>
     <script type="text/javascript" src="js/css3d.js"></script>
@@ -30,7 +30,7 @@
 <body>
 <div class="container" id="container">
     <audio loop="true" sytle="display:none" id="BGM">
-        <source src="audio/bgm.wav" type="audio/mpeg"></source>
+        <source src="audio/bgm.mp3" type="audio/mpeg"></source>
     </audio>
     <div class="firstAd" style="">
         <!---->
@@ -113,11 +113,13 @@
         <img class="logo" src="img/layer/logo1.png">
         <img class="light" src="img/layer/light.png">
         <img class="door" src="img/layer/door1.png">
-        <div class="lights">
+        <div class="btn"></div>
+        <div class="txt">返回上一页</div>
+        <!-- <div class="lights">
           <img src="img/layer/light1.png" alt="" style="left: 1.1rem;">
           <img src="img/layer/light1.png" alt="" style="left: 3.2rem;">
           <img src="img/layer/light1.png" alt="" style="left: 5.4rem;">
-        </div>
+        </div> -->
     </div>
     <div class="layer layer_2" data-scalar-x='30.0' data-scalar-y='30.0'>
         <img data-depth="0.00" src="img/layer/txt_2.png">
@@ -125,12 +127,14 @@
         <img class="logo" src="img/layer/logo2.png">
         <img class="light" src="img/layer/light.png">
         <img class="door" src="img/layer/door2.png">
-        <div class="lights">
+        <div class="btn"></div>
+        <div class="txt">返回上一页</div>
+        <!-- <div class="lights">
           <img src="img/layer/light2.png" alt="">
           <img src="img/layer/light2.png" alt="">
           <img src="img/layer/light2.png" alt="">
           <img src="img/layer/light2.png" alt="">
-        </div>
+        </div> -->
     </div>
     <div class="layer layer_3" data-scalar-x='30.0' data-scalar-y='30.0'>
         <img data-depth="0.00" src="img/layer/txt_3.png">
@@ -138,13 +142,15 @@
         <img class="logo" src="img/layer/logo3.png">
         <img class="light" src="img/layer/light.png">
         <img class="door" src="img/layer/door3.png">
-        <div class="lights">
+        <div class="btn"></div>
+        <div class="txt">返回上一页</div>
+        <!-- <div class="lights">
           <img src="img/layer/light3.png" alt="">
           <img src="img/layer/light3.png" alt="">
           <img src="img/layer/light3.png" alt="">
           <img src="img/layer/light3.png" alt="">
           <img src="img/layer/light3.png" alt="">
-        </div>
+        </div> -->
     </div>
     <div class="music_play"><img src="img/music_play_03.png"></div>
     <div class="huazhu_logo">
@@ -154,6 +160,9 @@
 <script type="text/javascript" src="js/main.js"></script>
 <script type="text/javascript" src="js/parallax.js"></script>
 <script>
+  document.body.addEventListener('touchmove',function(e){
+    e.preventDefault();
+  })
   var scene_1 = $('.layer_1').get(0)
   var parallax = new Parallax(scene_1, {
     pointerEvents: true,
@@ -166,6 +175,12 @@
   var parallax = new Parallax(scene_3, {
     pointerEvents: true,
   });
+  $('.layer .txt').click(function(){
+    $(this).parent().fadeOut();
+  })
+  $('.layer .btn').click(function(){
+    window.location.href="http://m.huazhu.com/Hotel/Detail?hotelId=1000202";
+  })
   $('#ar_item_1').click(function(){
     $('.layer_1').fadeIn();
   })
@@ -174,9 +189,6 @@
   })
   $('#ar_item_3').click(function(){
     $('.layer_3').fadeIn();
-  })
-  $('.layer').click(function(){
-    window.location.href="http://m.huazhu.com/Hotel/Detail?hotelId=1000202";
   })
   function size() {
     var _screenWidth = document.documentElement.clientWidth < 300 ? 300 : document.documentElement.clientWidth,
@@ -218,7 +230,7 @@
       if(touchObj.touchY>=0&&touchObj.touchY<=maxCoundTouch){
 //        $(touchIcon).css("top",touchObj.touchY + 'px');
         $(touchIcon).css("transform","translateY("+touchObj.touchY+"px)")
-        console.log((-1*((touchObj.bgTransHeight/maxCoundTouch)*touchObj.touchY+12.03*window.fontSize)))
+        // console.log((-1*((touchObj.bgTransHeight/maxCoundTouch)*touchObj.touchY+12.03*window.fontSize)))
         $(".mainBar").css("background-position-y",(-1*((touchObj.bgTransHeight/maxCoundTouch)*touchObj.touchY+12.03*window.fontSize))+'px')
         // 1 2 3 4 出现顺序
         if(1*touchObj.touchY>=maxCoundTouch*0.2){
@@ -366,21 +378,21 @@
     //创建立方图
     var panoRect = {w: 1200, h: 800};
     var bgData = [
-      {url: 'img/line_01.png',b_url:'img/b_01.png?id=1',z_url:'img/z_01.png'},
-      {url: 'img/line_02.png',b_url:'img/b_02.png?id=1',z_url:'img/z_02.png'},
-      {url: 'img/line_03.png',b_url:'img/b_03.png?id=1',z_url:'img/z_03.png'},
-      {url: 'img/line_04.png',b_url:'img/b_04.png?id=1',z_url:'img/z_04.png'},
-      {url: 'img/line_05.png',b_url:'img/b_05.png?id=1',z_url:'img/z_05.png'},
-      {url: 'img/line_06.png',b_url:'img/b_06.png?id=1',z_url:'img/z_06.png'},
-      {url: 'img/line_07.png',b_url:'img/b_07.png?id=1',z_url:'img/z_07.png'},
-      {url: 'img/line_08.png',b_url:'img/b_08.png?id=1',z_url:'img/z_08.png'},
-      {url: 'img/line_09.png',b_url:'img/b_09.png?id=1',z_url:'img/z_09.png'},
-      {url: 'img/line_10.png',b_url:'img/b_10.png?id=1',z_url:'img/z_10.png'},
-      {url: 'img/line_11.png',b_url:'img/b_11.png?id=1',z_url:'img/z_11.png'},
-      {url: 'img/line_12.png',b_url:'img/b_12.png?id=1',z_url:'img/z_12.png'},
-      {url: 'img/line_13.png',b_url:'img/b_13.png?id=1',z_url:'img/z_13.png'},
-      {url: 'img/line_14.png',b_url:'img/b_14.png?id=1',z_url:'img/z_14.png'},
-      {url: 'img/line_15.png',b_url:'img/b_15.png?id=1',z_url:'img/z_15.png'},
+      {url: 'img/line_01.png',b_url:'img/b_01.png?id=2',z_url:'img/z_01.png'},
+      {url: 'img/line_02.png',b_url:'img/b_02.png?id=2',z_url:'img/z_02.png'},
+      {url: 'img/line_03.png',b_url:'img/b_03.png?id=2',z_url:'img/z_03.png'},
+      {url: 'img/line_04.png',b_url:'img/b_04.png?id=2',z_url:'img/z_04.png'},
+      {url: 'img/line_05.png',b_url:'img/b_05.png?id=2',z_url:'img/z_05.png'},
+      {url: 'img/line_06.png',b_url:'img/b_06.png?id=2',z_url:'img/z_06.png'},
+      {url: 'img/line_07.png',b_url:'img/b_07.png?id=2',z_url:'img/z_07.png'},
+      {url: 'img/line_08.png',b_url:'img/b_08.png?id=2',z_url:'img/z_08.png'},
+      {url: 'img/line_09.png',b_url:'img/b_09.png?id=2',z_url:'img/z_09.png'},
+      {url: 'img/line_10.png',b_url:'img/b_10.png?id=2',z_url:'img/z_10.png'},
+      {url: 'img/line_11.png',b_url:'img/b_11.png?id=2',z_url:'img/z_11.png'},
+      {url: 'img/line_12.png',b_url:'img/b_12.png?id=2',z_url:'img/z_12.png'},
+      {url: 'img/line_13.png',b_url:'img/b_13.png?id=2',z_url:'img/z_13.png'},
+      {url: 'img/line_14.png',b_url:'img/b_14.png?id=2',z_url:'img/z_14.png'},
+      {url: 'img/line_15.png',b_url:'img/b_15.png?id=2',z_url:'img/z_15.png'},
     ];
     function createPano(imgs, rect) {
       var _len = imgs.length;

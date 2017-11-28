@@ -395,7 +395,7 @@
 }
 .layer .door{
     width: 94%;
-    bottom: 2.2rem;
+    bottom: 2.3rem;
     top: auto !important;
     left: 3% !important;
 }
@@ -427,7 +427,7 @@
     top:auto !important;
 }
 .layer_1{
-    background-image:url("../img/layer/bg_1.jpg");
+    background-image:url("../img/layer/bg_not_open.jpg");
 }
 .layer_1>img:nth-of-type(1){
     width:3.6rem;
@@ -474,7 +474,7 @@
     width:2.6rem;
 }
 .layer_2{
-    background-image:url("../img/layer/bg_2.jpg");
+    background-image:url("../img/layer/bg_not_open.jpg");
 }
 .layer_2>img:nth-of-type(1){
     width:4.76rem;
@@ -485,7 +485,7 @@
     top: 1.14rem !important;
 }
 .layer_3{
-    background-image:url("../img/layer/bg_3.jpg");
+    background-image:url("../img/layer/bg_not_open.jpg");
 }
 .layer_3>img:nth-of-type(1){
     width:4.09rem;
@@ -572,12 +572,12 @@
 }
 
 @-webkit-keyframes light{
-    0%{opacity: 0;  transform:rotate(0deg);  }
-    50%{opacity: 1; transform:rotate(180deg);}
-    100%{opacity: 0;transform:rotate(360deg);}
+    0%{opacity: 0;  }
+    50%{opacity: 1; }
+    100%{opacity: 0;}
 }
 @-moz-keyframes light{
-    0%{opacity: 0;  transform:rotate(0deg);  }
-    50%{opacity: 1; transform:rotate(180deg);}
-    100%{opacity: 0;transform:rotate(360deg);}
+    0%{opacity: 0;  }
+    50%{opacity: 1; }
+    100%{opacity: 0;}
 }
